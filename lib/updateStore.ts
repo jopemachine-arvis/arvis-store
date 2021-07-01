@@ -2,6 +2,11 @@ import chalk from 'chalk';
 import fse from 'fs-extra';
 import getNpmDownloads, { NPMDownloadInfo } from 'get-npm-downloads';
 import latestVersion from 'latest-version';
+let { Octokit } = require('@octokit/rest');
+Octokit = Octokit.plugin(require("octokit-commit-multiple-files"));
+
+// auth value should be given through github action
+const octokit = new Octokit({ auth: process.argv[2] });
 
 const updateInfo = async (bundleId: string) => {
     const extension: any = {};
@@ -52,9 +57,24 @@ const updateInfo = async (bundleId: string) => {
         ...Object.assign({}, ...pluginNewInfos)
     };
 
-    await fse.writeJSON('./internal/store.json', {
+    const newStore = JSON.stringify({
         workflows: renewedWorkflows,
         plugins: renewedPlugins,
-    }, { encoding: 'utf-8', spaces: 4 });
+    });
+
+    await octokit.repos.createOrUpdateFiles({
+        owner: 'jopemachine',
+        repo: 'arvis-store',
+        branch: 'master',
+        createBranch: false,
+        changes: [
+          {
+            message: "[bot] Update store",
+            files: {
+              "internal/store.json": newStore,
+            },
+          }
+        ],
+      });
 })();
 
