@@ -21,7 +21,7 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: npm install, update store
+        uses: ./
         run: |
-          cd ..
           npm i
           npm run update-store
