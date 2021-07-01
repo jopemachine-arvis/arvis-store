@@ -26,4 +26,4 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm install
       - run: npm run build
-      - run: npm update-store
+      - run: npm run update-store
