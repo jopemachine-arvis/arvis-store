@@ -23,4 +23,4 @@ jobs:
       - name: npm install, update store
         run: |
           npm i
-          ./node_modules/.bin/ts-node lib/updateStore.ts
+          npm run update-store
