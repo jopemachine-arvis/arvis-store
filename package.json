@@ -18,6 +18,9 @@
     "arvis",
     "arvis-extension"
   ],
+  "repository": {
+    "url": "https://github.com/jopemachine/arvis-store"
+  },
   "author": "jopemachine",
   "license": "MIT",
   "devDependencies": {
