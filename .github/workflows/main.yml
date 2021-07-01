@@ -22,4 +22,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Update store
-        run: npm i && ts-node lib/updateStore.ts
+        run: npm i && ./node_modules/.bin/ts-node lib/updateStore.ts
