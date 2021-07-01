@@ -3,7 +3,7 @@ import fse from 'fs-extra';
 import getNpmDownloads, { NPMDownloadInfo } from 'get-npm-downloads';
 import latestVersion from 'latest-version';
 let { Octokit } = require('@octokit/rest');
-Octokit = Octokit.plugin(require("octokit-commit-multiple-files"));
+Octokit = Octokit.plugin(require('octokit-commit-multiple-files'));
 
 // auth value should be given through github action
 const octokit = new Octokit({ auth: process.argv[2] });
@@ -69,9 +69,9 @@ const updateInfo = async (bundleId: string) => {
         createBranch: false,
         changes: [
           {
-            message: "[bot] Update store",
+            message: '[bot] Update store',
             files: {
-              "internal/store.json": newStore,
+              'internal/store.json': newStore,
             },
           }
         ],

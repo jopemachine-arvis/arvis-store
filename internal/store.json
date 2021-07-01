@@ -1,1 +1,9 @@
-test
+{
+    "workflows": {
+        "jopemachine.arvis-chrome-workflow": {
+        },
+        "jopemachine.arvis-evernote-workflow": {
+        }
+    },
+    "plugins": {}
+}
