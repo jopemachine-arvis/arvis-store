@@ -1,0 +1,15 @@
+{
+    "workflows": {
+        "jopemachine.arvis-chrome-workflow": {
+            "latest": "0.0.5",
+            "dw": 124,
+            "dt": 338
+        },
+        "jopemachine.arvis-evernote-workflow": {
+            "latest": "0.0.4",
+            "dw": 105,
+            "dt": 211
+        }
+    },
+    "plugins": {}
+}
