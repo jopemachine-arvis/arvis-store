@@ -1,4 +1,4 @@
-import fse from 'fs-extra';
+import { fetchStore } from './fetchStore';
 let { Octokit } = require('@octokit/core');
 const { createPullRequest } = require('octokit-plugin-create-pull-request');
 Octokit = Octokit.plugin(createPullRequest);
@@ -8,7 +8,7 @@ export const publish = async ({ name, creator, type, apiKey }: { name: string; c
         auth: apiKey,
     });
 
-    const store = await fse.readJSON('./internal/store.json');
+    const store = await fetchStore();
     store[type][`${creator}.${name}`] = {};
 
     // Returns a normal Octokit PR response
@@ -24,7 +24,7 @@ export const publish = async ({ name, creator, type, apiKey }: { name: string; c
                 {
                     /* optional: if `files` is not passed, an empty commit is created instead */
                     files: {
-                        'internal/store.json': 'Content for file1',
+                        'internal/store.json': store,
                     },
                     commit: `[bot] Add new ${type}, '${name}'`,
                 },

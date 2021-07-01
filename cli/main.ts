@@ -53,7 +53,7 @@ const cliFunc = async (input: string[], flags?: any) => {
     case 'pu':
     case 'pub':
     case 'publish':
-      publishHandler();
+      await publishHandler();
   }
 
   return '';

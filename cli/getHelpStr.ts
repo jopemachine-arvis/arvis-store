@@ -4,11 +4,15 @@ export default () =>
   chalk.whiteBright(`
 Usage
 
-  To view some extension info, run below command.
-    arvis-store view [some_extension_name]
+    To view some extension info, run below command.
+        $ arvis-store view [some_extension_name]
 
-  To publish current extension directory to npm, add extension info to arvis-store,
-    arvis-store publish
+    To publish arvis extension to store, need to set github api key first.
+    Run below command to set github api key.
+        $ arvis-store set-gh-api-key [github_api_key]
+
+    To publish current extension directory to npm and arvis-store, run below command.
+        $ arvis-store publish
 
 See README.md for more details.
 `);

@@ -14,6 +14,9 @@
     "lint": "tslint --project tsconfig.json --fix",
     "update-store": "node ./dist/lib/updateStore.js"
   },
+  "files": [
+    "dist/**"
+  ],
   "keywords": [
     "arvis",
     "arvis-extension"
@@ -43,11 +46,13 @@
     "execa": "^5.1.1",
     "find-up": "^5.0.0",
     "fs-extra": "^10.0.0",
+    "got": "^11.8.2",
     "lodash": "^4.17.21",
     "meow": "^9.0.0",
     "octokit-commit-multiple-files": "^3.2.1",
     "octokit-plugin-create-pull-request": "^3.9.3",
     "ora": "^5.4.1",
+    "parse-json": "^5.2.0",
     "semver": "^7.3.5"
   },
   "husky": {
