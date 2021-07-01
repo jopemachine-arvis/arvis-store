@@ -5,8 +5,6 @@ import latestVersion from 'latest-version';
 let { Octokit } = require('@octokit/rest');
 Octokit = Octokit.plugin(require('octokit-commit-multiple-files'));
 
-console.log(process.argv[2].substr(0, 5));
-
 // auth value should be given through github action
 const octokit = new Octokit({ auth: process.argv[2] });
 
