@@ -26,8 +26,5 @@
         "no-var-keyword": true,
         "prefer-const": true,
         "no-string-literal": false
-    },
-    "rulesDirectory": [
-        "src/"
-    ]
+    }
 }
