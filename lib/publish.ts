@@ -14,9 +14,9 @@ const { createPullRequest } = require('octokit-plugin-create-pull-request');
 Octokit = Octokit.plugin(createPullRequest);
 
 const transform = (extension: any) => {
-  const supportWin = extension.platform ? extension.platform.includes("win32") : true;
-  const supportMac = extension.platform ? extension.platform.includes("darwin") : true;
-  const supportLinux = extension.platform ? extension.platform.includes("linux") : true;
+  const supportWin = extension.platform ? extension.platform.includes('win32') : true;
+  const supportMac = extension.platform ? extension.platform.includes('darwin') : true;
+  const supportLinux = extension.platform ? extension.platform.includes('linux') : true;
 
   const isSupported = (support: boolean) => support ? 'O' : 'X';
 
