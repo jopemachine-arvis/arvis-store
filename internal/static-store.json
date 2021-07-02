@@ -76,5 +76,12 @@
             "uploaded": 1625236781130
         }
     },
-    "plugins": {}
+    "plugins": {
+        "jopemachine.arvis-app-launcher-plugin": {
+            "description": "App launcher plugin for Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-app-launcher-plugin",
+            "uploaded": 1625237972772
+        }
+    }
 }
