@@ -59,7 +59,6 @@ export const publish = async ({
   let doc;
   let docPath;
   let extensions: any;
-  const firstPublish: boolean = staticStore[bundleId] ? false : true;
 
   if (type === 'workflow') {
     doc = await fetchWorkflowCompilationTemplate();
@@ -102,35 +101,33 @@ export const publish = async ({
 
   doc = doc.replace('${links}', tableStr);
 
-  if (firstPublish) {
-    // Add new extension to static-store
-    staticStore[`${type}s`][bundleId] = {
-      platform,
-      description,
-      creator,
-      webAddress,
-      uploaded: new Date().getTime()
-    };
+  // Add new extension to static-store
+  staticStore[`${type}s`][bundleId] = {
+    platform,
+    description,
+    creator,
+    webAddress,
+    uploaded: new Date().getTime()
+  };
 
-    // Create a PR adding new extension
-    octokit
-      .createPullRequest({
-        base: 'master',
-        owner: 'jopemachine',
-        repo: 'arvis-store',
-        title: `[bot] Add new ${type}, '${name}'`,
-        head: `bot-add-${creator.split(' ').join('-')}-${name}`,
-        body: `## Add new extension\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}`,
-        changes: [
-          {
-            /* optional: if `files` is not passed, an empty commit is created instead */
-            files: {
-              [docPath]: doc,
-              'internal/static-store.json': JSON.stringify(staticStore, null, 4),
-            },
-            commit: `[bot] Add new ${type}, '${name}'`,
+  // Create a PR adding new extension
+  octokit
+    .createPullRequest({
+      base: 'master',
+      owner: 'jopemachine',
+      repo: 'arvis-store',
+      title: `[bot] Add new ${type}, '${name}'`,
+      head: `bot-add-${creator.split(' ').join('-')}-${name}`,
+      body: `## Add new extension\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}`,
+      changes: [
+        {
+          /* optional: if `files` is not passed, an empty commit is created instead */
+          files: {
+            [docPath]: doc,
+            'internal/static-store.json': JSON.stringify(staticStore, null, 4),
           },
-        ],
-      });
-  }
+          commit: `[bot] Add new ${type}, '${name}'`,
+        },
+      ],
+    });
 };
