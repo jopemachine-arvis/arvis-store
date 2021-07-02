@@ -72,6 +72,7 @@ export const publish = async ({
 
   extensions[bundleId] = {
     platform,
+    webAddress,
     description
   };
 
@@ -79,6 +80,7 @@ export const publish = async ({
     const [creator, name] = extensionBundleId.split('.');
     return {
       name,
+      creator,
       ...extensions[extensionBundleId],
       ...staticStore[`${type}s`][extensionBundleId]
     };
@@ -112,7 +114,7 @@ export const publish = async ({
         repo: 'arvis-store',
         title: `[bot] Add new ${type}, '${name}'`,
         head: `bot-add-${creator.split(' ').join('-')}-${name}`,
-        body: `# Add new extension\n\n* Type: '${type}'\n* Name: '${name}'\n* Description: ${description}`,
+        body: `## Add new extension\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}`,
         changes: [
           {
             /* optional: if `files` is not passed, an empty commit is created instead */

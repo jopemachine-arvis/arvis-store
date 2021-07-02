@@ -1,6 +1,6 @@
 {
   "name": "arvis-store",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Retrieve info about Arvis extensions easily",
   "main": "dist/lib/index.js",
   "bin": {
