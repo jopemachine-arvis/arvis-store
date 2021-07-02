@@ -35,6 +35,12 @@
             "creator": "Sam Verschueren",
             "webAddress": "https://github.com/jopemachine/arvis-fkill",
             "uploaded": 1625233660764
+        },
+        "jopemachine.arvis-simple-naver-search": {
+            "description": "Simple naver search workflow for Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-simple-naver-search",
+            "uploaded": 1625234844511
         }
     },
     "plugins": {}
