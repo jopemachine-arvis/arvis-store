@@ -17,6 +17,12 @@
             "creator": "Radimir Bitsov",
             "webAddress": "https://github.com/jopemachine/arvis-vue",
             "uploaded": 1625230992545
+        },
+        "Anton Niklasson.arvis-loremipsum": {
+            "description": "Lorem Ipsum generator in Arvis",
+            "creator": "Anton Niklasson",
+            "webAddress": "https://github.com/jopemachine/arvis-loremipsum",
+            "uploaded": 1625231989574
         }
     },
     "plugins": {}
