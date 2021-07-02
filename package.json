@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "rebuild": "rm -rf node_modules && npm i && npm run build",
-    "lint": "eslint cli/** --fix && eslint lib/** --fix && eslint scripts/** --fix"
+    "lint": "eslint cli/** --fix && eslint lib/** --fix && eslint scripts/** --fix",
+    "update-store": "node ./dist/scripts/updateStore.js"
   },
   "files": [
     "dist/**"
