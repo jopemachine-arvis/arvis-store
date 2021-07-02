@@ -82,10 +82,13 @@
             "uploaded": 1625240254276
         },
         "Sindre Sorhus.arvis-mac-dark-mode": {
+            "platform": [
+                "darwin"
+            ],
             "description": "Arvis workflow to toggle the system dark mode",
             "creator": "Sindre Sorhus",
             "webAddress": "https://github.com/jopemachine/arvis-mac-dark-mode",
-            "uploaded": 1625241476961
+            "uploaded": 1625241667785
         }
     },
     "plugins": {
