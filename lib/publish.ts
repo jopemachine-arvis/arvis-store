@@ -53,23 +53,22 @@ export const publish = async ({
     auth: apiKey,
   });
 
-  const store = await fetchStore();
   const staticStore = await fetchStaticStore();
   const bundleId = `${creator}.${name}`;
 
   let doc;
   let docPath;
   let extensions: any;
-  const firstPublish: boolean = store[bundleId] ? false : true;
+  const firstPublish: boolean = staticStore[bundleId] ? false : true;
 
   if (type === 'workflow') {
     doc = await fetchWorkflowCompilationTemplate();
     docPath = 'docs/workflow-links.md';
-    extensions = store.workflows;
+    extensions = staticStore.workflows;
   } else {
     doc = await fetchPluginCompilationTemplate();
     docPath = 'docs/plugin-links.md';
-    extensions = store.plugins;
+    extensions = staticStore.plugins;
   }
 
   extensions[bundleId] = {
