@@ -77,11 +77,11 @@
         }
     },
     "plugins": {
-        "jopemachine.arvis-freedict-plugin": {
-            "description": "Dictionary plugin for Arvis using dictionaryapi.dev",
+        "jopemachine.arvis-app-launcher-plugin": {
+            "description": "App launcher plugin for Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-freedict-plugin",
-            "uploaded": 1625238042179
+            "webAddress": "https://github.com/jopemachine/arvis-app-launcher-plugin",
+            "uploaded": 1625238182793
         }
     }
 }
