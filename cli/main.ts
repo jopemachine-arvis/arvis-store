@@ -35,16 +35,22 @@ const publishHandler = async (flags: any) => {
     discardStdin: true
   }).start(chalk.whiteBright(`Publishing '${bundleId}.arvis${type}'..`));
 
-  await publish({
-    apiKey: getGithubApiKey(),
-    creator,
-    description,
-    name,
-    options: flags,
-    platform,
-    type,
-    webAddress,
-  });
+  try {
+    await publish({
+      apiKey: getGithubApiKey(),
+      creator,
+      description,
+      name,
+      options: flags,
+      platform,
+      type,
+      webAddress,
+    });
+  } catch(err) {
+    spinner.fail('Works failed.');
+    console.error(chalk.red(err));
+    return;
+  }
 
   spinner.succeed('🎉 Works done!');
 };

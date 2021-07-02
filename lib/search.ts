@@ -13,8 +13,8 @@ export const searchWorkflow = async (input: string) => {
       name,
       creator,
       type: 'workflow',
-      ...store[extension],
-      ...staticStore[extension]
+      ...store['workflows'][extension],
+      ...staticStore['workflows'][extension]
     };
   });
 };
@@ -32,8 +32,8 @@ export const searchPlugin = async (input: string) => {
       name,
       creator,
       type: 'plugin',
-      ...store[extension],
-      ...staticStore[extension]
+      ...store['plugins'][extension],
+      ...staticStore['plugins'][extension]
     };
   });
 };

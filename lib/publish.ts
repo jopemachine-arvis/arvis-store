@@ -54,12 +54,10 @@ export const publish = async ({
   });
 
   if (!options.skipNpm) {
-    const { stderr } = await execa('npm', ['--publish']);
+    const { stderr } = await execa('npm', ['publish']);
     if (stderr) {
-      throw new Error(chalk.redBright('npm publish failed!'));
+      throw new Error(chalk.redBright(`npm publish failed!, ${stderr}`));
     }
-  } else {
-    console.log(chalk.greenBright('skip npm publishing...'));
   }
 
   const store = await fetchStore();
@@ -89,7 +87,7 @@ export const publish = async ({
     return {
       name,
       ...extensions[extensionBundleId],
-      ...staticStore[extensionBundleId]
+      ...staticStore[`${type}s`][extensionBundleId]
     };
   });
 
@@ -102,8 +100,8 @@ export const publish = async ({
 
   doc = doc.replace('${links}', tableStr);
 
-  if (!store[type][bundleId]) {
-    staticStore[bundleId] = {
+  if (!store[`${type}s`][bundleId]) {
+    staticStore[`${type}s`][bundleId] = {
       platform,
       description,
       creator,
@@ -111,7 +109,7 @@ export const publish = async ({
       uploaded: new Date().getTime()
     };
 
-    store[type][bundleId] = {};
+    store[`${type}s`][bundleId] = {};
 
     // Returns a normal Octokit PR response
     // See https://octokit.github.io/rest.js/#octokit-routes-pulls-create

@@ -18,7 +18,7 @@ export const setGithubApiKey = (apiKey: string) => {
 
 export const getGithubApiKey = () => {
   if (!config.has('GH_API_KEY')) {
-    throw new Error('GH_API_KEY key not set. Please set github api key first');
+    throw new Error('GH_API_KEY key is not set. Please set github api key first');
   }
   return config.get('GH_API_KEY') as string;
 };

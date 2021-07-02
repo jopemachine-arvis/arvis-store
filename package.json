@@ -1,8 +1,8 @@
 {
   "name": "arvis-store",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "Retrieve info about Arvis extensions easily",
-  "main": "dist/index.js",
+  "main": "dist/lib/index.js",
   "bin": {
     "arvis-store": "dist/cli/main.js",
     "arvis-store-publish": "dist/lib/publish.js"
@@ -51,7 +51,7 @@
     "fs-extra": "^10.0.0",
     "got": "^11.8.2",
     "lodash": "^4.17.21",
-    "markdown-table": "^3.0.1",
+    "markdown-table": "^2.0.0",
     "meow": "^9.0.0",
     "octokit-commit-multiple-files": "^3.2.1",
     "octokit-plugin-create-pull-request": "^3.9.3",
