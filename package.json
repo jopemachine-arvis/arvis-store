@@ -1,7 +1,7 @@
 {
   "name": "arvis-store",
-  "version": "0.0.23",
-  "description": "Retrieve info about Arvis extensions easily",
+  "version": "0.0.24",
+  "description": "Publish and Retrieve Arvis extension info",
   "main": "dist/lib/index.js",
   "bin": {
     "arvis-store": "dist/cli/main.js",
