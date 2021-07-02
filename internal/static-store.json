@@ -82,6 +82,12 @@
             "creator": "jopemachine",
             "webAddress": "https://github.com/jopemachine/arvis-freedict-plugin",
             "uploaded": 1625238042179
+        },
+        "jopemachine.arvis-app-launcher-plugin": {
+            "description": "App launcher plugin for Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-app-launcher-plugin",
+            "uploaded": 1625238763313
         }
     }
 }
