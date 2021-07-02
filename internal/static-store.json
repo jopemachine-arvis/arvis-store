@@ -48,11 +48,11 @@
             "webAddress": "https://github.com/jopemachine/arvis-simple-naver-search",
             "uploaded": 1625234844511
         },
-        "Radimir Bitsov.arvis-keycode": {
-            "description": "⌨ Arivs workflow to get JavaScript keycodes.",
-            "creator": "Radimir Bitsov",
-            "webAddress": "https://github.com/jopemachine/arvis-keycode",
-            "uploaded": 1625235183369
+        "Sam Verschueren.arvis-css-triggers": {
+            "description": "Arvis workflow to search through csstriggers.com",
+            "creator": "Sam Verschueren",
+            "webAddress": "https://github.com/jopemachine/arvis-css-triggers",
+            "uploaded": 1625235458250
         }
     },
     "plugins": {}
