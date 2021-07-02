@@ -59,7 +59,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
+      "pre-commit": "git pull origin master && npm run lint",
       "pre-push": "npm run lint"
     }
   }
