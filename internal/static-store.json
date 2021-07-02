@@ -5,6 +5,12 @@
             "creator": "SamVerschueren",
             "webAddress": "https://github.com/jopemachine/arvis-font-awesome",
             "uploaded": 1625229314754
+        },
+        "Sindre Sorhus.arvis-npms": {
+            "description": "Arvis workflow to search for npm packages with npms.io",
+            "creator": "Sindre Sorhus",
+            "webAddress": "https://github.com/jopemachine/arvis-npms",
+            "uploaded": 1625230304273
         }
     },
     "plugins": {}
