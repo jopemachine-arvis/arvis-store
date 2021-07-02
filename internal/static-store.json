@@ -17,6 +17,12 @@
             "creator": "Radimir Bitsov",
             "webAddress": "https://github.com/jopemachine/arvis-vue",
             "uploaded": 1625230992545
+        },
+        "Sam Verschueren.arvis-fkill": {
+            "description": "Arvis workflow to fabulously search and kill processes",
+            "creator": "Sam Verschueren",
+            "webAddress": "https://github.com/jopemachine/arvis-fkill",
+            "uploaded": 1625231838672
         }
     },
     "plugins": {}

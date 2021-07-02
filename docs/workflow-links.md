@@ -10,8 +10,9 @@ You can find `arvis-workflow` here.
 
 Note: Below table entries are sorted in alphabetically.
 
-| Name                                                                    | Creator        |                       Description                      | Win | Mac | Linux |
-| :---------------------------------------------------------------------- | :------------- | :----------------------------------------------------: | :-: | :-: | :---- |
-| [arvis-font-awesome](https://github.com/jopemachine/arvis-font-awesome) | SamVerschueren |     Arvis workflow to search for font-awesome icons    |  O  |  O  | O     |
-| [arvis-npms](https://github.com/jopemachine/arvis-npms)                 | Sindre Sorhus  | Arvis workflow to search for npm packages with npms.io |  O  |  O  | O     |
-| [arvis-vue](https://github.com/jopemachine/arvis-vue)                   | Radimir Bitsov |      Search for Vue.js API references on vuejs.org     |  O  |  O  | O     |
+| Name                                                                    | Creator         |                       Description                      | Win | Mac | Linux |
+| :---------------------------------------------------------------------- | :-------------- | :----------------------------------------------------: | :-: | :-: | :---- |
+| [arvis-fkill](https://github.com/jopemachine/arvis-fkill)               | Sam Verschueren | Arvis workflow to fabulously search and kill processes |  O  |  O  | O     |
+| [arvis-font-awesome](https://github.com/jopemachine/arvis-font-awesome) | SamVerschueren  |     Arvis workflow to search for font-awesome icons    |  O  |  O  | O     |
+| [arvis-npms](https://github.com/jopemachine/arvis-npms)                 | Sindre Sorhus   | Arvis workflow to search for npm packages with npms.io |  O  |  O  | O     |
+| [arvis-vue](https://github.com/jopemachine/arvis-vue)                   | Radimir Bitsov  |      Search for Vue.js API references on vuejs.org     |  O  |  O  | O     |
