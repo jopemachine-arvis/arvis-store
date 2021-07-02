@@ -65,6 +65,15 @@
             "creator": "Vincent Klaiber",
             "webAddress": "https://github.com/jopemachine/arvis-packagist",
             "uploaded": 1625236061153
+        },
+        "Sindre Sorhus.arvis-mac-lock": {
+            "platform": [
+                "darwin"
+            ],
+            "description": "Lock your Mac",
+            "creator": "Sindre Sorhus",
+            "webAddress": "https://github.com/jopemachine/arvis-mac-lock",
+            "uploaded": 1625236781130
         }
     },
     "plugins": {}
