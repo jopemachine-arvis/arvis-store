@@ -23,6 +23,11 @@
             "creator": "Anton Niklasson",
             "webAddress": "https://github.com/jopemachine/arvis-loremipsum",
             "uploaded": 1625231989574
+        "Radimir Bitsov.arvis-coolors": {
+            "description": "🎨 Arvis workflow to generate color names",
+            "creator": "Radimir Bitsov",
+            "webAddress": "https://github.com/jopemachine/arvis-coolors",
+            "uploaded": 1625232213052
         }
     },
     "plugins": {}
