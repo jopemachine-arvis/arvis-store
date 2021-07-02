@@ -14,19 +14,19 @@ let { Octokit } = require('@octokit/core');
 const { createPullRequest } = require('octokit-plugin-create-pull-request');
 Octokit = Octokit.plugin(createPullRequest);
 
-const transformToMarkdownRow = (extensionInfo: any) => {
-  const supportWin = extensionInfo.platform ? extensionInfo.platform.win32 : true;
-  const supportMac = extensionInfo.platform ? extensionInfo.platform.darwin : true;
-  const supportLinux = extensionInfo.platform ? extensionInfo.platform.linux : true;
+const transform = (extension: any) => {
+  const supportWin = extension.platform ? extension.platform.win32 : true;
+  const supportMac = extension.platform ? extension.platform.darwin : true;
+  const supportLinux = extension.platform ? extension.platform.linux : true;
 
   const isSupported = (support: boolean) => support ? 'O' : 'X';
 
   return [
-    `[${extensionInfo.name}](${extensionInfo.webAddress})`,
+    extension.webAddress ? `[${extension.name}](${extension.webAddress})` : extension.name,
     isSupported(supportWin),
     isSupported(supportMac),
     isSupported(supportLinux),
-    extensionInfo.description ? extensionInfo.description : '(No description)'
+    extension.description ? extension.description : '(No description)'
   ];
 };
 
@@ -89,19 +89,16 @@ export const publish = async ({
     return {
       name,
       ...extensions[extensionBundleId],
-      description: staticStore[extensionBundleId],
-      webAddress: staticStore[extensionBundleId],
-      platform: staticStore[extensionBundleId],
+      ...staticStore[extensionBundleId]
     };
   });
 
   const tableStr = markdownTable([
     ['Name', 'Win', 'Mac', 'Linux', 'Description'],
-    ...extensionInfoArr.map(transformToMarkdownRow)
+    ...extensionInfoArr.map(transform)
   ], {
     align: ['l', 'c', 'c', 'c', 'l']
-  }
-  );
+  });
 
   doc = doc.replace('${links}', tableStr);
 
