@@ -35,6 +35,36 @@
             "creator": "Sam Verschueren",
             "webAddress": "https://github.com/jopemachine/arvis-fkill",
             "uploaded": 1625233660764
+        },
+        "Sindre Sorhus.arvis-emoji": {
+            "description": "Arvis workflow to find relevant emoji from text",
+            "creator": "Sindre Sorhus",
+            "webAddress": "https://github.com/jopemachine/arvis-emoji",
+            "uploaded": 1625234750935
+        },
+        "jopemachine.arvis-simple-naver-search": {
+            "description": "Simple naver search workflow for Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-simple-naver-search",
+            "uploaded": 1625234844511
+        },
+        "Sam Verschueren.arvis-css-triggers": {
+            "description": "Arvis workflow to search through csstriggers.com",
+            "creator": "Sam Verschueren",
+            "webAddress": "https://github.com/jopemachine/arvis-css-triggers",
+            "uploaded": 1625235458250
+        },
+        "Emmanouil Konstantinidis.arvis-react-native": {
+            "description": "Access the React Native Documentation from Arvis",
+            "creator": "Emmanouil Konstantinidis",
+            "webAddress": "https://github.com/jopemachine/arvis-react-native",
+            "uploaded": 1625235742751
+        },
+        "Vincent Klaiber.arvis-packagist": {
+            "description": "Arvis workflow to search for PHP packages with Packagist",
+            "creator": "Vincent Klaiber",
+            "webAddress": "https://github.com/jopemachine/arvis-packagist",
+            "uploaded": 1625236061153
         }
     },
     "plugins": {}
