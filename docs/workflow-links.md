@@ -10,8 +10,9 @@ You can find `arvis-workflow` here.
 
 Note: Below table entries are arranged alphabetically.
 
-| Name                    | Win | Mac | Linux | Description                                     |
-| :---------------------- | :-: | :-: | :---: | :---------------------------------------------- |
-| arvis-chrome-workflow   |  O  |  O  |   O   | (No description)                                |
-| arvis-evernote-workflow |  O  |  O  |   O   | (No description)                                |
-| font-awesome            |  O  |  O  |   O   | Arvis workflow to search for font-awesome icons |
+| Name                                                              | Win | Mac | Linux | Description                                     |
+| :---------------------------------------------------------------- | :-: | :-: | :---: | :---------------------------------------------- |
+| arvis-chrome-workflow                                             |  O  |  O  |   O   | (No description)                                |
+| arvis-evernote-workflow                                           |  O  |  O  |   O   | (No description)                                |
+| [font-awesome](https://github.com/jopemachine/arvis-font-awesome) |  O  |  O  |   O   | Arvis workflow to search for font-awesome icons |
+| [arvis-node-doc](https://github.com/jopemachine/arvis-node-doc)   |  O  |  O  |   O   | Search for Node.js documentation in Arvis       |
