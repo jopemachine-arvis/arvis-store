@@ -13,6 +13,7 @@ Note: Below table entries are sorted in extension name alphabetically.
 | Name                                                                    | Creator         | Description                                            | Win | Mac | Linux |
 | :---------------------------------------------------------------------- | :-------------- | :----------------------------------------------------- | :-: | :-: | :---: |
 | [arvis-coolors](https://github.com/jopemachine/arvis-coolors)           | Radimir Bitsov  | 🎨 Arvis workflow to generate color names              |  O  |  O  |   O   |
+| [arvis-emoji](https://github.com/jopemachine/arvis-emoji)               | Sindre Sorhus   | Arvis workflow to find relevant emoji from text        |  O  |  O  |   O   |
 | [arvis-fkill](https://github.com/jopemachine/arvis-fkill)               | Sam Verschueren | Arvis workflow to fabulously search and kill processes |  O  |  O  |   O   |
 | [arvis-font-awesome](https://github.com/jopemachine/arvis-font-awesome) | SamVerschueren  | Arvis workflow to search for font-awesome icons        |  O  |  O  |   O   |
 | [arvis-loremipsum](https://github.com/jopemachine/arvis-loremipsum)     | Anton Niklasson | Lorem Ipsum generator in Arvis                         |  O  |  O  |   O   |

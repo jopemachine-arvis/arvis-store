@@ -35,6 +35,12 @@
             "creator": "Sam Verschueren",
             "webAddress": "https://github.com/jopemachine/arvis-fkill",
             "uploaded": 1625233660764
+        },
+        "Sindre Sorhus.arvis-emoji": {
+            "description": "Arvis workflow to find relevant emoji from text",
+            "creator": "Sindre Sorhus",
+            "webAddress": "https://github.com/jopemachine/arvis-emoji",
+            "uploaded": 1625234750935
         }
     },
     "plugins": {}
