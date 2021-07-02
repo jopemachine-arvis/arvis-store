@@ -102,12 +102,6 @@ const cliFunc = async (input: string[], flags?: any) => {
 };
 
 const cli = meow(getHelpStr(), { flags: { 
-  skipNpm: {
-    type: 'boolean',
-    default: false,
-    isRequired: false,
-    alias: 's'
-  }
 }});
 
 (async () => {

@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import chalk from 'chalk';
-import execa from 'execa';
 import {
   fetchStore,
   fetchStaticStore,
@@ -52,13 +50,6 @@ export const publish = async ({
   const octokit = new Octokit({
     auth: apiKey,
   });
-
-  if (!options.skipNpm) {
-    const { stderr } = await execa('npm', ['publish']);
-    if (stderr) {
-      throw new Error(chalk.redBright(`npm publish failed!, ${stderr}`));
-    }
-  }
 
   const store = await fetchStore();
   const staticStore = await fetchStaticStore();
