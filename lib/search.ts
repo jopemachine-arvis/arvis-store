@@ -4,7 +4,7 @@ export const searchWorkflow = async (input: string) => {
   const store = await fetchStore();
   const staticStore = await fetchStaticStore();
 
-  return Object.keys(store.workflow).filter((extension) => {
+  return Object.keys(store.workflows).filter((extension) => {
     const [creator, name] = extension.split('.');
     return name.includes(input);
   }).map((extension) => {
@@ -23,7 +23,7 @@ export const searchPlugin = async (input: string) => {
   const store = await fetchStore();
   const staticStore = await fetchStaticStore();
 
-  return Object.keys(store.plugin).filter((extension) => {
+  return Object.keys(store.plugins).filter((extension) => {
     const [creator, name] = extension.split('.');
     return name.includes(input);
   }).map((extension) => {

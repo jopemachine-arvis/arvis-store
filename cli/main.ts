@@ -16,7 +16,7 @@ const publishHandler = async (flags: any) => {
     throw new Error('It seems current directory is not arvis extension directory.');
   }
 
-  const extensionInfo =  await fse.readJSON(extensionFilePath);
+  const extensionInfo = await fse.readJSON(extensionFilePath);
   const type = extensionFilePath.endsWith('arvis-workflow.json') ? 'workflow' : 'plugin';
   const { valid, errorMsg } = validate(extensionInfo, type);
 
@@ -46,7 +46,7 @@ const publishHandler = async (flags: any) => {
       type,
       webAddress,
     });
-  } catch(err) {
+  } catch (err) {
     spinner.fail('Works failed.');
     console.error(chalk.red(err));
     return;
@@ -63,17 +63,16 @@ const viewHandler = async (input: string) => {
 
   const retrievedExtensions = await searchExtension(input);
   const result = retrievedExtensions.map((extension) => {
-    return `${chalk.magentaBright(extension.name)}
-Type: ${extension.type}
-Total downloads: ${extension.dt}
-Last week downloads: ${extension.dw}
-Creator: ${extension.creator}
-Description: ${extension.description}
-`;
-  }).join('\n');
+    return chalk.whiteBright(`${chalk.magentaBright(extension.name)}
+Type: ${chalk.yellow(extension.type)}
+Total downloads: ${chalk.greenBright(extension.dt)}
+Last week downloads: ${chalk.greenBright(extension.dw)}
+Creator: ${chalk.green(extension.creator)}
+Description: ${chalk.cyan(extension.description)}
+`);}).join('\n');
 
-  spinner.succeed('Done.');
-  console.log(result);
+  spinner.succeed('Jobs done.');
+  console.log('\n' + result);
 };
 
 /**
@@ -101,8 +100,10 @@ const cliFunc = async (input: string[], flags?: any) => {
   return '';
 };
 
-const cli = meow(getHelpStr(), { flags: { 
-}});
+const cli = meow(getHelpStr(), {
+  flags: {
+  }
+});
 
 (async () => {
   console.log(await cliFunc(cli.input, cli.flags));
