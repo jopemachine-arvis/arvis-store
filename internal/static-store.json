@@ -60,11 +60,14 @@
             "webAddress": "https://github.com/jopemachine/arvis-react-native",
             "uploaded": 1625235742751
         },
-        "Vincent Klaiber.arvis-packagist": {
-            "description": "Arvis workflow to search for PHP packages with Packagist",
-            "creator": "Vincent Klaiber",
-            "webAddress": "https://github.com/jopemachine/arvis-packagist",
-            "uploaded": 1625236061153
+        "Sindre Sorhus.arvis-mac-lock": {
+            "platform": [
+                "darwin"
+            ],
+            "description": "Lock your Mac",
+            "creator": "Sindre Sorhus",
+            "webAddress": "https://github.com/jopemachine/arvis-mac-lock",
+            "uploaded": 1625236354194
         }
     },
     "plugins": {}
