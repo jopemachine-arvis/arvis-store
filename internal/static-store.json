@@ -74,6 +74,12 @@
             "creator": "Sindre Sorhus",
             "webAddress": "https://github.com/jopemachine/arvis-mac-lock",
             "uploaded": 1625236781130
+        },
+        "jopemachine.arvis-extension-updater": {
+            "description": "Arvis extension updater",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-extension-updater",
+            "uploaded": 1625239327587
         }
     },
     "plugins": {
@@ -88,12 +94,6 @@
             "creator": "jopemachine",
             "webAddress": "https://github.com/jopemachine/arvis-app-launcher-plugin",
             "uploaded": 1625238763313
-        },
-        "jopemachine.arvis-filesearch-plugin": {
-            "description": "File search plugin for Arvis",
-            "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-filesearch-plugin",
-            "uploaded": 1625239087532
         }
     }
 }
