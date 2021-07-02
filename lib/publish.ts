@@ -104,6 +104,7 @@ export const publish = async ({
   doc = doc.replace('${links}', tableStr);
 
   if (firstPublish) {
+    // Add new extension to static-store
     staticStore[`${type}s`][bundleId] = {
       platform,
       description,
@@ -112,9 +113,7 @@ export const publish = async ({
       uploaded: new Date().getTime()
     };
 
-    store[`${type}s`][bundleId] = {};
-
-    // Returns a normal Octokit PR response
+    // Create a PR adding new extension
     octokit
       .createPullRequest({
         base: 'master',
