@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "rebuild": "rm -rf node_modules && npm i && npm run build",
-    "lint": "tslint --project tsconfig.json --fix",
+    "lint": "eslint cli/** --fix && eslint lib/** --fix",
     "update-store": "node ./dist/lib/updateStore.js"
   },
   "files": [
@@ -31,10 +31,13 @@
     "@types/lodash": "^4.14.170",
     "@types/node": "^15.12.5",
     "@types/semver": "^7.3.6",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.29.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "get-npm-downloads": "^0.0.4",
     "husky": "^4.2.5",
     "latest-version": "^5.1.0",
-    "tslint": "^6.1.3",
     "typescript": "^4.3.4"
   },
   "dependencies": {
@@ -48,6 +51,7 @@
     "fs-extra": "^10.0.0",
     "got": "^11.8.2",
     "lodash": "^4.17.21",
+    "markdown-table": "^3.0.1",
     "meow": "^9.0.0",
     "octokit-commit-multiple-files": "^3.2.1",
     "octokit-plugin-create-pull-request": "^3.9.3",
