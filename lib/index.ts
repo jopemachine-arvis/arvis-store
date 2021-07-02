@@ -1,7 +1,7 @@
-import { fetchStore } from './fetchStore';
+import * as api from './arvisStoreApi';
 import { publish } from './publish';
 
 export {
-  fetchStore,
+  api,
   publish
 };

@@ -1,18 +1,20 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import chalk from 'chalk';
 import execa from 'execa';
-import { fetchStore } from './fetchStore';
 import {
+  fetchStore,
+  fetchStaticStore,
   fetchPluginCompilationTemplate,
   fetchWorkflowCompilationTemplate
-} from './fetchDocs';
+} from './arvisStoreApi';
 import { markdownTable } from 'markdown-table';
+import _ from 'lodash';
 
 let { Octokit } = require('@octokit/core');
 const { createPullRequest } = require('octokit-plugin-create-pull-request');
 Octokit = Octokit.plugin(createPullRequest);
 
-const transform = (extensionInfo: any) => {
+const transformToMarkdownRow = (extensionInfo: any) => {
   const supportWin = extensionInfo.platform ? extensionInfo.platform.win32 : true;
   const supportMac = extensionInfo.platform ? extensionInfo.platform.darwin : true;
   const supportLinux = extensionInfo.platform ? extensionInfo.platform.linux : true;
@@ -20,30 +22,32 @@ const transform = (extensionInfo: any) => {
   const isSupported = (support: boolean) => support ? 'O' : 'X';
 
   return [
-    extensionInfo.name,
+    `[${extensionInfo.name}](${extensionInfo.webAddress})`,
     isSupported(supportWin),
     isSupported(supportMac),
     isSupported(supportLinux),
-    extensionInfo.description
+    extensionInfo.description ? extensionInfo.description : '(No description)'
   ];
 };
 
 export const publish = async ({
-  name,
-  creator,
-  platform,
-  description,
-  type,
   apiKey,
-  options
+  creator,
+  description,
+  name,
+  options,
+  platform,
+  type,
+  webAddress,
 }: {
-  name: string;
-  creator: string;
-  type: 'workflow' | 'plugin';
   apiKey: string;
+  creator: string;
+  description: string;
+  name: string;
   options: any;
   platform: Record<string, unknown>;
-  description: string;
+  type: 'workflow' | 'plugin';
+  webAddress: string;
 }) => {
   const octokit = new Octokit({
     auth: apiKey,
@@ -59,11 +63,12 @@ export const publish = async ({
   }
 
   const store = await fetchStore();
+  const staticStore = await fetchStaticStore();
   const bundleId = `${creator}.${name}`;
 
   let doc;
   let docPath;
-  let extensions;
+  let extensions: any;
   if (type === 'workflow') {
     doc = await fetchWorkflowCompilationTemplate();
     docPath = 'docs/workflow-links.md';
@@ -74,11 +79,26 @@ export const publish = async ({
     extensions = store.plugins;
   }
 
+  extensions[bundleId] = {
+    platform,
+    description
+  };
+
+  const extensionInfoArr = _.map(extensions, (extensionBundleId) => {
+    const [creator, name] = extensionBundleId.split('.');
+    return {
+      name,
+      ...extensions[extensionBundleId],
+      description: staticStore[extensionBundleId],
+      webAddress: staticStore[extensionBundleId],
+      platform: staticStore[extensionBundleId],
+    };
+  });
+
   const tableStr = markdownTable([
     ['Name', 'Win', 'Mac', 'Linux', 'Description'],
-    ...extensions.map(transform)
-  ]
-  , {
+    ...extensionInfoArr.map(transformToMarkdownRow)
+  ], {
     align: ['l', 'c', 'c', 'c', 'l']
   }
   );
@@ -86,6 +106,14 @@ export const publish = async ({
   doc = doc.replace('${links}', tableStr);
 
   if (!store[type][bundleId]) {
+    staticStore[bundleId] = {
+      platform,
+      description,
+      creator,
+      webAddress,
+      uploaded: new Date().getTime()
+    };
+
     store[type][bundleId] = {};
 
     // Returns a normal Octokit PR response
@@ -101,8 +129,9 @@ export const publish = async ({
           {
             /* optional: if `files` is not passed, an empty commit is created instead */
             files: {
-              'internal/store.json': store,
               [docPath]: doc,
+              'internal/store.json': store,
+              'internal/static-store.json': staticStore,
             },
             commit: `[bot] Add new ${type}, '${name}'`,
           },

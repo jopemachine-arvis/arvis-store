@@ -7,7 +7,7 @@
 import chalk from 'chalk';
 import getNpmDownloads, { NPMDownloadInfo } from 'get-npm-downloads';
 import latestVersion from 'latest-version';
-import { fetchStore } from './fetchStore';
+import { fetchStore } from './arvisStoreApi';
 let { Octokit } = require('@octokit/rest');
 Octokit = Octokit.plugin(require('octokit-commit-multiple-files'));
 

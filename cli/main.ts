@@ -23,7 +23,7 @@ const publishHandler = async (flags: any) => {
     throw new Error(errorMsg);
   }
 
-  const { creator, name, description, platform } = extensionInfo;
+  const { creator, name, description, platform, webAddress } = extensionInfo;
   const bundleId = `${creator}.${name}`;
 
   const spinner = ora({
@@ -34,11 +34,12 @@ const publishHandler = async (flags: any) => {
   await publish({
     apiKey: getGithubApiKey(),
     creator,
-    name,
-    type,
     description,
+    name,
+    options: flags,
     platform,
-    options: flags
+    type,
+    webAddress,
   });
 
   spinner.succeed('🎉 Works done!');
