@@ -88,6 +88,12 @@
             "creator": "jopemachine",
             "webAddress": "https://github.com/jopemachine/arvis-app-launcher-plugin",
             "uploaded": 1625238763313
+        },
+        "jopemachine.arvis-filesearch-plugin": {
+            "description": "File search plugin for Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-filesearch-plugin",
+            "uploaded": 1625239087532
         }
     }
 }

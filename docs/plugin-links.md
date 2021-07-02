@@ -13,4 +13,5 @@ Note: Below table entries are sorted in extension name alphabetically.
 | Name                                                                                  | Creator     | Description                                         | Win | Mac | Linux |
 | :------------------------------------------------------------------------------------ | :---------- | :-------------------------------------------------- | :-: | :-: | :---: |
 | [arvis-app-launcher-plugin](https://github.com/jopemachine/arvis-app-launcher-plugin) | jopemachine | App launcher plugin for Arvis                       |  O  |  O  |   O   |
+| [arvis-filesearch-plugin](https://github.com/jopemachine/arvis-filesearch-plugin)     | jopemachine | File search plugin for Arvis                        |  O  |  O  |   O   |
 | [arvis-freedict-plugin](https://github.com/jopemachine/arvis-freedict-plugin)         | jopemachine | Dictionary plugin for Arvis using dictionaryapi.dev |  O  |  O  |   O   |
