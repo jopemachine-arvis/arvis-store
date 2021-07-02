@@ -74,6 +74,12 @@
             "creator": "Sindre Sorhus",
             "webAddress": "https://github.com/jopemachine/arvis-mac-lock",
             "uploaded": 1625236781130
+        },
+        "jopemachine.arvis-extension-updater": {
+            "description": "Arvis extension updater",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-extension-updater",
+            "uploaded": 1625240254276
         }
     },
     "plugins": {
