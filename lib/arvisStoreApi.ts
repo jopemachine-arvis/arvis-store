@@ -2,25 +2,25 @@ import got from 'got';
 import parseJson from 'parse-json';
 import { pluginCompilationUrl, staticStoreUrl, storeUrl, workflowCompilationUrl } from './constant';
 
-export const fetchWorkflowCompilationTemplate = async () => {
+export const fetchWorkflowCompilationTemplate = async (): Promise<string> => {
   try {
     const resp = await got(workflowCompilationUrl);
-    return (parseJson(resp.body) as any);
+    return resp.body as any;
   } catch (err) {
     throw new Error('fetchWorkflowCompilationTemplate url not available.');
   }
 };
 
-export const fetchPluginCompilationTemplate = async () => {
+export const fetchPluginCompilationTemplate = async (): Promise<string> => {
   try {
     const resp = await got(pluginCompilationUrl);
-    return (parseJson(resp.body) as any);
+    return resp.body as any;
   } catch (err) {
     throw new Error('fetchPluginCompilationTemplate url not available.');
   }
 };
 
-export const fetchStore = async () => {
+export const fetchStore = async (): Promise<any> => {
   try {
     const resp = await got(storeUrl);
     return (parseJson(resp.body) as any);
@@ -29,7 +29,7 @@ export const fetchStore = async () => {
   }
 };
 
-export const fetchStaticStore = async () => {
+export const fetchStaticStore = async (): Promise<any> => {
   try {
     const resp = await got(staticStoreUrl);
     return (parseJson(resp.body) as any);
