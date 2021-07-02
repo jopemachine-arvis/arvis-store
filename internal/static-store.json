@@ -11,6 +11,12 @@
             "creator": "Sindre Sorhus",
             "webAddress": "https://github.com/jopemachine/arvis-npms",
             "uploaded": 1625230304273
+        },
+        "Radimir Bitsov.arvis-vue": {
+            "description": "Search for Vue.js API references on vuejs.org",
+            "creator": "Radimir Bitsov",
+            "webAddress": "https://github.com/jopemachine/arvis-vue",
+            "uploaded": 1625230992545
         }
     },
     "plugins": {}
