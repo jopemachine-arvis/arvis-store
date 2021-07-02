@@ -19,6 +19,6 @@ Note: Below table entries are sorted in extension name alphabetically.
 | [arvis-font-awesome](https://github.com/jopemachine/arvis-font-awesome)               | SamVerschueren           | Arvis workflow to search for font-awesome icons        |  O  |  O  |   O   |
 | [arvis-loremipsum](https://github.com/jopemachine/arvis-loremipsum)                   | Anton Niklasson          | Lorem Ipsum generator in Arvis                         |  O  |  O  |   O   |
 | [arvis-npms](https://github.com/jopemachine/arvis-npms)                               | Sindre Sorhus            | Arvis workflow to search for npm packages with npms.io |  O  |  O  |   O   |
-| [arvis-react-native](https://github.com/jopemachine/arvis-react-native)               | Emmanouil Konstantinidis | Access the React Native Documentation from Alfred      |  O  |  O  |   O   |
+| [arvis-react-native](https://github.com/jopemachine/arvis-react-native)               | Emmanouil Konstantinidis | Access the React Native Documentation from Arvis      |  O  |  O  |   O   |
 | [arvis-simple-naver-search](https://github.com/jopemachine/arvis-simple-naver-search) | jopemachine              | Simple naver search workflow for Arvis                 |  O  |  O  |   O   |
 | [arvis-vue](https://github.com/jopemachine/arvis-vue)                                 | Radimir Bitsov           | Search for Vue.js API references on vuejs.org          |  O  |  O  |   O   |
