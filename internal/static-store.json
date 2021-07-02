@@ -41,6 +41,12 @@
             "creator": "Sindre Sorhus",
             "webAddress": "https://github.com/jopemachine/arvis-emoji",
             "uploaded": 1625234750935
+        },
+        "jopemachine.arvis-simple-naver-search": {
+            "description": "Simple naver search workflow for Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-simple-naver-search",
+            "uploaded": 1625234844511
         }
     },
     "plugins": {}
