@@ -28,12 +28,33 @@ Usage
 
     To publish arvis extension to store, need to set github api key first.
     Run below command to set github api key.
+        $ arvis-store set [github_api_key]
         $ arvis-store set-gh-api-key [github_api_key]
 
     To publish current extension directory to npm and arvis-store, run below command.
         $ arvis-store publish
 
 See README.md for more details.
+```
+
+## How to add arvis-extension to arvis-store
+
+1. Install arvis-store
+
+```
+$ npm i -g arvis-store
+```
+
+2. Set Github personal access token
+
+```
+$ arvis-store set [github_personal_access_token]
+```
+
+3. Run publish command
+
+```
+$ arvis-store publish
 ```
 
 ## How it works
