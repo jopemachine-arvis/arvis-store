@@ -1,6 +1,6 @@
 {
   "name": "arvis-store",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Publish and Retrieve Arvis extension info",
   "main": "dist/lib/index.js",
   "bin": {
@@ -34,7 +34,7 @@
     "@typescript-eslint/parser": "^4.28.1",
     "eslint": "^7.29.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "get-npm-downloads": "^0.0.4",
+    "get-npm-downloads": "^0.0.5",
     "husky": "^4.2.5",
     "latest-version": "^5.1.0",
     "typescript": "^4.3.4"
@@ -42,6 +42,7 @@
   "dependencies": {
     "@octokit/core": "^3.5.1",
     "@octokit/rest": "^18.6.6",
+    "alpha-sort": "^4.0.0",
     "arvis-extension-validator": "^0.2.0",
     "chalk": "^4.1.1",
     "conf": "^10.0.1",

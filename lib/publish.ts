@@ -6,6 +6,7 @@ import {
   fetchWorkflowCompilationTemplate
 } from './arvisStoreApi';
 import _ from 'lodash';
+import alphaSort from 'alpha-sort';
 
 const markdownTable = require('markdown-table');
 let { Octokit } = require('@octokit/core');
@@ -77,7 +78,13 @@ export const publish = async ({
     description
   };
 
-  const extensionInfoArr = _.map(Object.keys(extensions), (extensionBundleId) => {
+  const extensionsSortedByName = Object.keys(extensions).sort((a: string, b: string) => {
+    const aName = a.split('.')[1];
+    const bName = b.split('.')[1];
+    return alphaSort({ natural: true, caseInsensitive: true })(aName, bName);
+  });
+
+  const extensionInfoArr = _.map(extensionsSortedByName, (extensionBundleId) => {
     const [creator, name] = extensionBundleId.split('.');
     return {
       name,
