@@ -7,9 +7,9 @@ import {
   fetchPluginCompilationTemplate,
   fetchWorkflowCompilationTemplate
 } from './arvisStoreApi';
-import { markdownTable } from 'markdown-table';
 import _ from 'lodash';
 
+const markdownTable = require('markdown-table');
 let { Octokit } = require('@octokit/core');
 const { createPullRequest } = require('octokit-plugin-create-pull-request');
 Octokit = Octokit.plugin(createPullRequest);
@@ -67,6 +67,8 @@ export const publish = async ({
   let doc;
   let docPath;
   let extensions: any;
+  const firstPublish: boolean = store[bundleId] ? false : true;
+
   if (type === 'workflow') {
     doc = await fetchWorkflowCompilationTemplate();
     docPath = 'docs/workflow-links.md';
@@ -82,7 +84,7 @@ export const publish = async ({
     description
   };
 
-  const extensionInfoArr = _.map(extensions, (extensionBundleId) => {
+  const extensionInfoArr = _.map(Object.keys(extensions), (extensionBundleId) => {
     const [creator, name] = extensionBundleId.split('.');
     return {
       name,
@@ -100,7 +102,7 @@ export const publish = async ({
 
   doc = doc.replace('${links}', tableStr);
 
-  if (!store[`${type}s`][bundleId]) {
+  if (firstPublish) {
     staticStore[`${type}s`][bundleId] = {
       platform,
       description,
@@ -112,21 +114,21 @@ export const publish = async ({
     store[`${type}s`][bundleId] = {};
 
     // Returns a normal Octokit PR response
-    // See https://octokit.github.io/rest.js/#octokit-routes-pulls-create
     octokit
       .createPullRequest({
+        base: 'master',
         owner: 'jopemachine',
         repo: 'arvis-store',
         title: `[bot] Add new ${type}, '${name}'`,
-        body: `[bot] Add new ${type}, '${name}'`,
-        base: 'master',
+        head: `bot-add-${creator.split(' ').join('-')}-${name}`,
+        body: `# Add new extension\n\n* Type: '${type}'\n* Name: '${name}'\n* Description: ${description}`,
         changes: [
           {
             /* optional: if `files` is not passed, an empty commit is created instead */
             files: {
               [docPath]: doc,
-              'internal/store.json': store,
-              'internal/static-store.json': staticStore,
+              'internal/store.json': JSON.stringify(store),
+              'internal/static-store.json': JSON.stringify(staticStore, null, 4),
             },
             commit: `[bot] Add new ${type}, '${name}'`,
           },
