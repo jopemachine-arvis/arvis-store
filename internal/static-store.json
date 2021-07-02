@@ -5,6 +5,12 @@
             "creator": "SamVerschueren",
             "webAddress": "https://github.com/jopemachine/arvis-font-awesome",
             "uploaded": 1625208260854
+        },
+        "igyubong.arvis-node-doc": {
+            "description": "Search for Node.js documentation in Arvis",
+            "creator": "igyubong",
+            "webAddress": "https://github.com/jopemachine/arvis-node-doc",
+            "uploaded": 1625210697678
         }
     },
     "plugins": {}
