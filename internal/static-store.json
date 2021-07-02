@@ -1,4 +1,11 @@
 {
-    "workflows": {},
+    "workflows": {
+        "SamVerschueren.arvis-font-awesome": {
+            "description": "Arvis workflow to search for font-awesome icons",
+            "creator": "SamVerschueren",
+            "webAddress": "https://github.com/jopemachine/arvis-font-awesome",
+            "uploaded": 1625229314754
+        }
+    },
     "plugins": {}
 }
