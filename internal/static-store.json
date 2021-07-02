@@ -29,6 +29,12 @@
             "creator": "Radimir Bitsov",
             "webAddress": "https://github.com/jopemachine/arvis-coolors",
             "uploaded": 1625232213052
+        },
+        "Sam Verschueren.arvis-fkill": {
+            "description": "Arvis workflow to fabulously search and kill processes",
+            "creator": "Sam Verschueren",
+            "webAddress": "https://github.com/jopemachine/arvis-fkill",
+            "uploaded": 1625233660764
         }
     },
     "plugins": {}
