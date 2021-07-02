@@ -8,6 +8,6 @@ You can find `arvis-plugin` here.
 
 `?`: Not tested
 
-Note: Below table entries are arranged alphabetically.
+Note: Below table entries are sorted in alphabetically.
 
 ${links}

@@ -1,6 +1,6 @@
 {
   "name": "arvis-store",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "Publish and Retrieve Arvis extension info",
   "main": "dist/lib/index.js",
   "bin": {
@@ -11,8 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "rebuild": "rm -rf node_modules && npm i && npm run build",
-    "lint": "eslint cli/** --fix && eslint lib/** --fix",
-    "update-store": "node ./dist/lib/updateStore.js"
+    "lint": "eslint cli/** --fix && eslint lib/** --fix && eslint scripts/** --fix"
   },
   "files": [
     "dist/**"

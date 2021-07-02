@@ -2,6 +2,10 @@
 
 Publish and Retrieve Arvis extension info
 
+* [Click me to check available Workflows](./docs/workflow-links.md)
+
+* [Click me to check available Plugins](./docs/plugin-links.md)
+
 ## Usage
 
 ```js

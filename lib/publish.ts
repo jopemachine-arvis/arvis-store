@@ -20,6 +20,7 @@ const transform = (extension: any) => {
   const isSupported = (support: boolean) => support ? 'O' : 'X';
 
   return [
+    extension.creator,
     extension.webAddress ? `[${extension.name}](${extension.webAddress})` : extension.name,
     isSupported(supportWin),
     isSupported(supportMac),
@@ -87,10 +88,10 @@ export const publish = async ({
   });
 
   const tableStr = markdownTable([
-    ['Name', 'Win', 'Mac', 'Linux', 'Description'],
+    ['Creator', 'Name', 'Win', 'Mac', 'Linux', 'Description'],
     ...extensionInfoArr.map(transform)
   ], {
-    align: ['l', 'c', 'c', 'c', 'l']
+    align: ['l', 'l', 'c', 'c', 'c', 'l']
   });
 
   doc = doc.replace('${links}', tableStr);
