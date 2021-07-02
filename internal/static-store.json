@@ -53,6 +53,12 @@
             "creator": "Sam Verschueren",
             "webAddress": "https://github.com/jopemachine/arvis-css-triggers",
             "uploaded": 1625235458250
+        },
+        "Emmanouil Konstantinidis.arvis-react-native": {
+            "description": "Access the React Native Documentation from Arvis",
+            "creator": "Emmanouil Konstantinidis",
+            "webAddress": "https://github.com/jopemachine/arvis-react-native",
+            "uploaded": 1625235742751
         }
     },
     "plugins": {}
