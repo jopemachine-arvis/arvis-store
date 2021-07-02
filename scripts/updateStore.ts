@@ -7,7 +7,7 @@
 import chalk from 'chalk';
 import getNpmDownloads, { NPMDownloadInfo } from 'get-npm-downloads';
 import latestVersion from 'latest-version';
-import { fetchStore } from '../lib/arvisStoreApi';
+import { fetchStaticStore } from '../lib/arvisStoreApi';
 let { Octokit } = require('@octokit/rest');
 Octokit = Octokit.plugin(require('octokit-commit-multiple-files'));
 
@@ -45,7 +45,7 @@ const updateInfo = async (bundleId: string) => {
 };
 
 (async () => {
-  const store = await fetchStore();
+  const store = await fetchStaticStore();
   const workflowBundleIds: string[] = Object.keys(store.workflows);
   const pluginBundleIds: string[] = Object.keys(store.plugins);
 

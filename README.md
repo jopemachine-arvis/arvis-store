@@ -65,7 +65,7 @@ $ arvis-store publish
 
 3. `internal/statis-store.json`'s information updates only when extensions are created or need to be changed by the extension creator
 
-4. `arvis-store publish` command creates a PR that adds your extension to the `internal/store.json` and `internal/static-store.json`.
+4. `arvis-store publish` command creates a PR that adds your extension to the `internal/static-store.json`.
 
 ## Related
 

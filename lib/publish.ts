@@ -98,7 +98,7 @@ export const publish = async ({
     ['Name', 'Creator', 'Description', 'Win', 'Mac', 'Linux'],
     ...extensionInfoArr.map(transform)
   ], {
-    align: ['l', 'l', 'c', 'c', 'c', 'l']
+    align: ['l', 'l', 'l', 'c', 'c', 'c']
   });
 
   doc = doc.replace('${links}', tableStr);
@@ -128,7 +128,6 @@ export const publish = async ({
             /* optional: if `files` is not passed, an empty commit is created instead */
             files: {
               [docPath]: doc,
-              'internal/store.json': JSON.stringify(store),
               'internal/static-store.json': JSON.stringify(staticStore, null, 4),
             },
             commit: `[bot] Add new ${type}, '${name}'`,
