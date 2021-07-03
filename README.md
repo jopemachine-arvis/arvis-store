@@ -1,5 +1,13 @@
 # arvis-store
 
+[![CodeFactor](https://www.codefactor.io/repository/github/jopemachine/arvis-store/badge)](https://www.codefactor.io/repository/github/jopemachine/arvis-store)
+[![Known Vulnerabilities](https://snyk.io/test/github/jopemachine/arvis-store/badge.svg)]()
+[![BuildStatus](https://api.travis-ci.com/jopemachine/arvis-store.svg)](https://www.npmjs.com/package/arvis-store)
+[![NPM version](https://badge.fury.io/js/arvis-store.svg)](http://badge.fury.io/js/arvis-store)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+[![GitHub issues](https://img.shields.io/github/issues/jopemachine/arvis-store.svg)](https://GitHub.com/jopemachine/arvis-store/issues/)
+
 Publish and Retrieve Arvis extension info
 
 ## Check on docs

@@ -8,7 +8,7 @@
     "arvis-store-publish": "dist/lib/publish.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc",
     "rebuild": "rm -rf node_modules && npm i && npm run build",
     "lint": "eslint cli/** --fix && eslint lib/** --fix && eslint scripts/** --fix",
@@ -36,6 +36,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "get-npm-downloads": "^0.0.5",
     "husky": "^4.2.5",
+    "jest": "^27.0.6",
     "latest-version": "^5.1.0",
     "typescript": "^4.3.4"
   },
