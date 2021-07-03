@@ -12,6 +12,7 @@ Note: Below table entries are sorted in extension name alphabetically.
 
 | Name                                                                                     | Creator                  | Description                                              | Win | Mac | Linux |
 | :--------------------------------------------------------------------------------------- | :----------------------- | :------------------------------------------------------- | :-: | :-: | :---: |
+| [arvis-chrome-workflow](https://github.com/jopemachine/arvis-chrome-workflow)         | jopemachine              | Chrome kernel based broswer workflow for Arvis 4         |  O  |  O  |   O   |
 | [arvis-coolors](https://github.com/jopemachine/arvis-coolors)                            | Radimir Bitsov           | 🎨 Arvis workflow to generate color names                |  O  |  O  |   O   |
 | [arvis-css-triggers](https://github.com/jopemachine/arvis-css-triggers)                  | Sam Verschueren          | Arvis workflow to search through csstriggers.com         |  O  |  O  |   O   |
 | [arvis-emoji](https://github.com/jopemachine/arvis-emoji)                                | Sindre Sorhus            | Arvis workflow to find relevant emoji from text          |  O  |  O  |   O   |
