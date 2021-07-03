@@ -101,8 +101,7 @@
         "jopemachine.arvis-app-launcher-plugin": {
             "description": "App launcher plugin for Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-app-launcher-plugin",
-            "uploaded": 1625238763313
+            "webAddress": "https://github.com/jopemachine/arvis-app-launcher-plugin"
         },
         "jopemachine.arvis-filesearch-plugin": {
             "description": "File search plugin for Arvis",
