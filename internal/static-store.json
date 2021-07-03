@@ -131,6 +131,15 @@
             "creator": "Renan Cakirerk",
             "webAddress": "https://medium.com/@bit2pixel/how-i-navigate-hundreds-of-tabs-on-chrome-with-jxa-and-alfred-9bbf971af02b",
             "uploaded": 1625321653457
+        },
+        "nikersify.arvis-polyglot": {
+            "platform": [
+                "darwin"
+            ],
+            "description": "Translate text with ease using Google Translate",
+            "creator": "nikersify",
+            "webAddress": "https://github.com/jopemachine/arvis-polyglot",
+            "uploaded": 1625321932718
         }
     },
     "plugins": {
