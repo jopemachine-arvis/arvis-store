@@ -18,6 +18,7 @@ Note: Below table entries are sorted in extension name alphabetically.
 | [arvis-extension-updater](https://github.com/jopemachine/arvis-extension-updater)     | jopemachine              | Arvis extension updater                                  |  O  |  O  |   O   |
 | [arvis-fkill](https://github.com/jopemachine/arvis-fkill)                             | Sam Verschueren          | Arvis workflow to fabulously search and kill processes   |  O  |  O  |   O   |
 | [arvis-font-awesome](https://github.com/jopemachine/arvis-font-awesome)               | SamVerschueren           | Arvis workflow to search for font-awesome icons          |  O  |  O  |   O   |
+| [arvis-hl](https://github.com/jopemachine/arvis-hl)                                   | importre                 | Highlight your code stored in clipboard                  |  X  |  O  |   X   |
 | [arvis-loremipsum](https://github.com/jopemachine/arvis-loremipsum)                   | Anton Niklasson          | Lorem Ipsum generator in Arvis                           |  O  |  O  |   O   |
 | [arvis-mac-dark-mode](https://github.com/jopemachine/arvis-mac-dark-mode)             | Sindre Sorhus            | Arvis workflow to toggle the system dark mode            |  X  |  O  |   X   |
 | [arvis-mac-lock](https://github.com/jopemachine/arvis-mac-lock)                       | Sindre Sorhus            | Lock your Mac                                            |  X  |  O  |   X   |
