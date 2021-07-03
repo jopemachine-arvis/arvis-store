@@ -62,24 +62,24 @@ export const publish = async ({
     throw new Error('Only png icons can be uploaded.');
   }
 
-  let doc;
-  let docPath;
+  let doc: string;
+  let docPath: string;
   let extensions: any;
 
   if (type === 'workflow') {
     doc = await fetchWorkflowCompilationTemplate();
     docPath = 'docs/workflow-links.md';
-    extensions = staticStore.workflows;
+    extensions = { ...staticStore.workflows };
   } else {
     doc = await fetchPluginCompilationTemplate();
     docPath = 'docs/plugin-links.md';
-    extensions = staticStore.plugins;
+    extensions = { ...staticStore.plugins };
   }
 
   extensions[bundleId] = {
     platform,
     webAddress,
-    description
+    description,
   };
 
   const extensionsSortedByName = Object.keys(extensions).sort((a: string, b: string) => {
@@ -108,6 +108,7 @@ export const publish = async ({
   doc = doc.replace('${links}', tableStr);
 
   const firstPub = _.isUndefined(staticStore[`${type}s`][bundleId]);
+  const uploaded = firstPub ? new Date().getTime() : staticStore[`${type}s`][bundleId].uploaded;
 
   // Add new extension to static-store
   staticStore[`${type}s`][bundleId] = {
@@ -115,11 +116,12 @@ export const publish = async ({
     description,
     creator,
     webAddress,
-    uploaded: firstPub ? new Date().getTime() : staticStore[`${type}s`][bundleId].uploaded
+    uploaded,
   };
 
   const title = firstPub ? `[bot] Add new ${type}, '${name}'` : `[bot] Update ${type}, '${name}'`;
   const head = firstPub ? `bot-add-${creator.split(' ').join('-')}-${name}` : `bot-update-${creator.split(' ').join('-')}-${name}`;
+  const commitMessage = firstPub ? `[bot] Add new ${type}, '${name}'` : `[bot] Update new ${type}, '${name}'`;
   const body = firstPub ?
     `## Add new extension\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}` :
     `## Update extension info\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}`;
@@ -145,7 +147,7 @@ export const publish = async ({
           } : null,
           'internal/static-store.json': JSON.stringify(staticStore, null, 4),
         },
-        commit: `[bot] Add new ${type}, '${name}'`,
+        commit: commitMessage,
       },
     ],
   });

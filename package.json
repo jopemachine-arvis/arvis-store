@@ -1,11 +1,10 @@
 {
   "name": "arvis-store",
-  "version": "0.0.36",
+  "version": "0.0.39",
   "description": "Publish and Retrieve Arvis extension info",
   "main": "dist/lib/index.js",
   "bin": {
-    "arvis-store": "dist/cli/main.js",
-    "arvis-store-publish": "dist/lib/publish.js"
+    "arvis-store": "dist/cli/main.js"
   },
   "scripts": {
     "test": "jest",
