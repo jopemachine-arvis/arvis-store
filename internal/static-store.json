@@ -116,6 +116,12 @@
             "creator": "jopemachine",
             "webAddress": "https://github.com/jopemachine/arvis-evernote-workflow#readme",
             "uploaded": 1625320635746
+        },
+        "Wei Xia.arvis-real-time-stock-price": {
+            "description": "show real time stock price in US market",
+            "creator": "Wei Xia",
+            "webAddress": "http://weixia.info/",
+            "uploaded": 1625321165960
         }
     },
     "plugins": {
