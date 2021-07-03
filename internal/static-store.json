@@ -89,15 +89,6 @@
             "creator": "Sindre Sorhus",
             "webAddress": "https://github.com/jopemachine/arvis-mac-dark-mode",
             "uploaded": 1625241667785
-        },
-        "importre.arvis-hl": {
-            "platform": [
-                "darwin"
-            ],
-            "description": "Highlight your code stored in clipboard",
-            "creator": "importre",
-            "webAddress": "https://github.com/jopemachine/arvis-hl",
-            "uploaded": 1625320014232
         }
     },
     "plugins": {
