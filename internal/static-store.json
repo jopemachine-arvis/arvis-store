@@ -124,10 +124,13 @@
             "uploaded": 1625321165960
         },
         "Renan Cakirerk.arvis-chrome-control": {
+            "platform": [
+                "darwin"
+            ],
             "description": "A workflow that allows you to fuzzy search all open tabs, jump to any tab, close duplicate tabs, close tabs by keyword or url",
             "creator": "Renan Cakirerk",
             "webAddress": "https://medium.com/@bit2pixel/how-i-navigate-hundreds-of-tabs-on-chrome-with-jxa-and-alfred-9bbf971af02b",
-            "uploaded": 1625321583095
+            "uploaded": 1625321653457
         }
     },
     "plugins": {
