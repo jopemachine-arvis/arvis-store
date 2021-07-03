@@ -1,6 +1,12 @@
 import got from 'got';
 import parseJson from 'parse-json';
-import { pluginCompilationUrl, staticStoreUrl, storeUrl, workflowCompilationUrl } from './constant';
+import {
+  extensionIconUrl,
+  pluginCompilationUrl,
+  staticStoreUrl,
+  storeUrl,
+  workflowCompilationUrl,
+} from './constant';
 
 export const fetchWorkflowCompilationTemplate = async (): Promise<string> => {
   try {
@@ -35,6 +41,15 @@ export const fetchStaticStore = async (): Promise<any> => {
     return (parseJson(resp.body) as any);
   } catch (err) {
     throw new Error('StaticStoreUrl url not available or store format might be invalid.');
+  }
+};
+
+export const fetchExtensionIcon = async (bundleId: string): Promise<any> => {
+  try {
+    const resp = await got(`${extensionIconUrl}/${bundleId}.png`);
+    return (resp.body) as any;
+  } catch (err) {
+    throw new Error('Extension icon url not available');
   }
 };
 

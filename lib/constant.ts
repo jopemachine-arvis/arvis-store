@@ -4,3 +4,5 @@ export const staticStoreUrl = 'https://raw.githubusercontent.com/jopemachine/arv
 
 export const workflowCompilationUrl = 'https://raw.githubusercontent.com/jopemachine/arvis-store/master/template/workflow-template.md';
 export const pluginCompilationUrl = 'https://raw.githubusercontent.com/jopemachine/arvis-store/master/template/plugin-template.md';
+
+export const extensionIconUrl = 'https://raw.githubusercontent.com/jopemachine/arvis-store/master/icons/';

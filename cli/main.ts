@@ -12,19 +12,26 @@ import { searchExtension } from '../lib';
 import getHelpStr from './getHelpStr';
 
 const publishHandler = async (flags: any) => {
-  const pkgPath = path.resolve(process.cwd(), 'package.json');
-  const pkgExist = await fse.pathExists(pkgPath);
-  const extensionFilePath = await findUp(['arvis-workflow.json', 'arvis-plugin.json']);
+  const spinner = ora({
+    color: 'cyan',
+    discardStdin: true
+  }).start(chalk.whiteBright('Checking extension info..'));
 
+  const extensionFilePath = await findUp(['arvis-workflow.json', 'arvis-plugin.json']);
   if (!extensionFilePath) {
-    throw new Error('It seems current directory is not arvis extension directory.');
+    spinner.fail('It seems current directory is not arvis extension directory.');
+    process.exit(1);
   }
 
-  const pkg = pkgExist ? await fse.readJSON('package.json') : undefined;
+  const extensionDir = path.dirname(extensionFilePath);
+  const pkgPath = path.resolve(extensionDir, 'package.json');
+  const pkgExist = await fse.pathExists(pkgPath);
+  const pkg = pkgExist ? await fse.readJSON(pkgPath) : undefined;
   const extensionInfo = await fse.readJSON(extensionFilePath);
 
   if (pkgExist && (pkg.name !== extensionInfo.name)) {
-    throw new Error('Make sure the package name is the same as the extension name.');
+    spinner.fail('Make sure the package name is the same as the extension name.');
+    process.exit(1);
   }
 
   const type = extensionFilePath.endsWith('arvis-workflow.json') ? 'workflow' : 'plugin';
@@ -34,22 +41,33 @@ const publishHandler = async (flags: any) => {
     throw new Error(errorMsg);
   }
 
-  const { creator, name, description, platform, webAddress } = extensionInfo;
-  if (!webAddress) throw new Error('Please type valid \'webAddress\' of extension');
-  if (!description) throw new Error('Please type valid \'description\' of extension');
+  let iconPath: string | undefined;
+  const { creator, name, description, platform, webAddress, defaultIcon } = extensionInfo;
+
+  if (!webAddress) {
+    spinner.fail('Please type valid \'webAddress\' of extension');
+    process.exit(1);
+  }
+  if (!description) {
+    spinner.fail('Please type valid \'description\' of extension');
+    process.exit(1);
+  }
+  if (!defaultIcon) {
+    spinner.warn('Extension don\'t have dafault icon. Recommend to use icon on extension');
+  } else {
+    iconPath = path.isAbsolute(defaultIcon) ? defaultIcon : path.resolve(extensionDir, defaultIcon);
+  }
 
   const bundleId = `${creator}.${name}`;
 
-  const spinner = ora({
-    color: 'cyan',
-    discardStdin: true
-  }).start(chalk.whiteBright(`Creating a PR to add '${bundleId}' to arvis-store..`));
+  spinner.start(chalk.whiteBright(`Creating a PR to add '${bundleId}' to arvis-store..`));
 
   try {
     await publish({
       apiKey: getGithubApiKey(),
       creator,
       description,
+      iconPath,
       name,
       options: flags,
       platform,
@@ -81,7 +99,7 @@ Creator: ${chalk.green(extension.creator)}
 Description: ${chalk.cyan(extension.description ? extension.description : '(No description)')}
 `);}).join('\n');
 
-  spinner.succeed('Jobs done.');
+  spinner.succeed('Search done.');
   console.log('\n' + result);
 };
 

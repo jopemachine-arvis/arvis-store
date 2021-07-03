@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import {
-  fetchStore,
   fetchStaticStore,
   fetchPluginCompilationTemplate,
   fetchWorkflowCompilationTemplate
 } from './arvisStoreApi';
 import _ from 'lodash';
 import alphaSort from 'alpha-sort';
+import fse from 'fs-extra';
 
 const markdownTable = require('markdown-table');
 let { Octokit } = require('@octokit/core');
@@ -34,6 +34,7 @@ export const publish = async ({
   apiKey,
   creator,
   description,
+  iconPath,
   name,
   options,
   platform,
@@ -43,6 +44,7 @@ export const publish = async ({
   apiKey: string;
   creator: string;
   description: string;
+  iconPath?: string;
   name: string;
   options: any;
   platform: Record<string, unknown>;
@@ -55,6 +57,10 @@ export const publish = async ({
 
   const staticStore = await fetchStaticStore();
   const bundleId = `${creator}.${name}`;
+
+  if (iconPath && !iconPath.endsWith('png')) {
+    throw new Error('Only png icons can be uploaded.');
+  }
 
   let doc;
   let docPath;
@@ -101,6 +107,8 @@ export const publish = async ({
 
   doc = doc.replace('${links}', tableStr);
 
+  const firstPub = _.isUndefined(staticStore[`${type}s`][bundleId]);
+
   // Add new extension to static-store
   staticStore[`${type}s`][bundleId] = {
     platform,
@@ -110,24 +118,35 @@ export const publish = async ({
     uploaded: new Date().getTime()
   };
 
+  const title = firstPub ? `[bot] Add new ${type}, '${name}'` : `[bot] Update ${type}, '${name}'`;
+  const head = firstPub ? `bot-add-${creator.split(' ').join('-')}-${name}` : `bot-update-${creator.split(' ').join('-')}-${name}`;
+  const body = firstPub ?
+    `## Add new extension\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}` :
+    `## Update extension info\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}`;
+
+  const icon = iconPath ? await fse.readFile(iconPath) : undefined;
+
   // Create a PR adding new extension
-  octokit
-    .createPullRequest({
-      base: 'master',
-      owner: 'jopemachine',
-      repo: 'arvis-store',
-      title: `[bot] Add new ${type}, '${name}'`,
-      head: `bot-add-${creator.split(' ').join('-')}-${name}`,
-      body: `## Add new extension\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}`,
-      changes: [
-        {
-          /* optional: if `files` is not passed, an empty commit is created instead */
-          files: {
-            [docPath]: doc,
-            'internal/static-store.json': JSON.stringify(staticStore, null, 4),
+  octokit.createPullRequest({
+    title,
+    head,
+    body,
+    base: 'master',
+    owner: 'jopemachine',
+    repo: 'arvis-store',
+    changes: [
+      {
+        /* optional: if `files` is not passed, an empty commit is created instead */
+        files: {
+          [docPath]: doc,
+          [`icons/${bundleId}.png`]: {
+            content: icon,
+            encoding: 'base64',
           },
-          commit: `[bot] Add new ${type}, '${name}'`,
+          'internal/static-store.json': JSON.stringify(staticStore, null, 4),
         },
-      ],
-    });
+        commit: `[bot] Add new ${type}, '${name}'`,
+      },
+    ],
+  });
 };

@@ -1,10 +1,11 @@
+import _ from 'lodash';
 import { fetchStaticStore, fetchStore } from './arvisStoreApi';
 
-export const searchWorkflow = async (input: string) => {
+export const searchWorkflow = async (input: string, options?: { order?: string }) => {
   const store = await fetchStore();
   const staticStore = await fetchStaticStore();
 
-  return Object.keys(store.workflows).filter((extension) => {
+  const items = Object.keys(store.workflows).filter((extension) => {
     const [creator, name] = extension.split('.');
     return name.includes(input);
   }).map((extension) => {
@@ -17,13 +18,19 @@ export const searchWorkflow = async (input: string) => {
       ...staticStore['workflows'][extension]
     };
   });
+
+  if (options && options.order) {
+    _.sortBy(items, options.order);
+  }
+
+  return items;
 };
 
-export const searchPlugin = async (input: string) => {
+export const searchPlugin = async (input: string, options?: { order?: string }) => {
   const store = await fetchStore();
   const staticStore = await fetchStaticStore();
 
-  return Object.keys(store.plugins).filter((extension) => {
+  const items = Object.keys(store.plugins).filter((extension) => {
     const [creator, name] = extension.split('.');
     return name.includes(input);
   }).map((extension) => {
@@ -36,11 +43,31 @@ export const searchPlugin = async (input: string) => {
       ...staticStore['plugins'][extension]
     };
   });
+
+  if (options && options.order) {
+    _.sortBy(items, options.order);
+  }
+
+  return items;
 };
 
-export const searchExtension = async (input: string) => {
-  return [
+export const searchExtension = async (input: string, options?: { order?: string }) => {
+  const extensions = [
     ...await searchWorkflow(input),
     ...await searchPlugin(input),
   ];
+
+  if (options && options.order) {
+    _.sortBy(extensions, options.order);
+  }
+
+  return extensions;
+};
+
+export const searchMostTotalDownload = async () => {
+  return await searchExtension('', { order: 'dt' });
+};
+
+export const searchMostWeeklyDownload = async () => {
+  return await searchExtension('', { order: 'dw' });
 };
