@@ -89,7 +89,7 @@ const viewHandler = async (input: string) => {
     discardStdin: true
   }).start(chalk.whiteBright('Retrieving results..'));
 
-  const retrievedExtensions = await searchExtension(input);
+  const retrievedExtensions = await searchExtension(input, { order: 'dt' });
   const result = retrievedExtensions.map((extension) => {
     return chalk.whiteBright(`${chalk.magentaBright(extension.name)}
 Type: ${chalk.yellow(extension.type)}

@@ -20,7 +20,7 @@ export const searchWorkflow = async (input: string, options?: { order?: string }
   });
 
   if (options && options.order) {
-    _.sortBy(items, options.order);
+    return _.sortBy(items, options.order).reverse();
   }
 
   return items;
@@ -45,7 +45,7 @@ export const searchPlugin = async (input: string, options?: { order?: string }) 
   });
 
   if (options && options.order) {
-    _.sortBy(items, options.order);
+    return _.sortBy(items, options.order).reverse();
   }
 
   return items;
@@ -58,7 +58,7 @@ export const searchExtension = async (input: string, options?: { order?: string 
   ];
 
   if (options && options.order) {
-    _.sortBy(extensions, options.order);
+    return _.sortBy(extensions, options.order).reverse();
   }
 
   return extensions;
