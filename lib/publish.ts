@@ -115,7 +115,7 @@ export const publish = async ({
     description,
     creator,
     webAddress,
-    uploaded: new Date().getTime()
+    uploaded: firstPub ? new Date().getTime() : staticStore[`${type}s`][bundleId].uploaded
   };
 
   const title = firstPub ? `[bot] Add new ${type}, '${name}'` : `[bot] Update ${type}, '${name}'`;
@@ -139,10 +139,10 @@ export const publish = async ({
         /* optional: if `files` is not passed, an empty commit is created instead */
         files: {
           [docPath]: doc,
-          [`icons/${bundleId}.png`]: {
-            content: icon,
+          [`icons/${type}/${bundleId}.png`]: icon ? {
+            content: Buffer.from(icon).toString('base64'),
             encoding: 'base64',
-          },
+          } : null,
           'internal/static-store.json': JSON.stringify(staticStore, null, 4),
         },
         commit: `[bot] Add new ${type}, '${name}'`,

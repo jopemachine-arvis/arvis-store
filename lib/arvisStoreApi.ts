@@ -44,9 +44,9 @@ export const fetchStaticStore = async (): Promise<any> => {
   }
 };
 
-export const fetchExtensionIcon = async (bundleId: string): Promise<any> => {
+export const fetchExtensionIcon = async (type: 'workflow' | 'plugin', bundleId: string): Promise<any> => {
   try {
-    const resp = await got(`${extensionIconUrl}/${bundleId}.png`);
+    const resp = await got(`${extensionIconUrl}/${type}/${bundleId}.png`);
     return (resp.body) as any;
   } catch (err) {
     throw new Error('Extension icon url not available');
