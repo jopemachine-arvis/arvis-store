@@ -12,7 +12,7 @@ Note: Below table entries are sorted in extension name alphabetically.
 
 | Name                                                                                     | Creator                  | Description                                              | Win | Mac | Linux |
 | :--------------------------------------------------------------------------------------- | :----------------------- | :------------------------------------------------------- | :-: | :-: | :---: |
-| [arvis-chrome-workflow](https://github.com/jopemachine/arvis-chrome-workflow)         | jopemachine              | Chrome kernel based broswer workflow for Arvis 4         |  O  |  O  |   O   |
+| [arvis-chrome-workflow](https://github.com/jopemachine/arvis-chrome-workflow)            | jopemachine              | Chrome kernel based broswer workflow for Arvis 4         |  O  |  O  |   O   |
 | [arvis-coolors](https://github.com/jopemachine/arvis-coolors)                            | Radimir Bitsov           | 🎨 Arvis workflow to generate color names                |  O  |  O  |   O   |
 | [arvis-css-triggers](https://github.com/jopemachine/arvis-css-triggers)                  | Sam Verschueren          | Arvis workflow to search through csstriggers.com         |  O  |  O  |   O   |
 | [arvis-emoji](https://github.com/jopemachine/arvis-emoji)                                | Sindre Sorhus            | Arvis workflow to find relevant emoji from text          |  O  |  O  |   O   |
@@ -28,5 +28,6 @@ Note: Below table entries are sorted in extension name alphabetically.
 | [arvis-npms](https://github.com/jopemachine/arvis-npms)                                  | Sindre Sorhus            | Arvis workflow to search for npm packages with npms.io   |  O  |  O  |   O   |
 | [arvis-packagist](https://github.com/jopemachine/arvis-packagist)                        | Vincent Klaiber          | Arvis workflow to search for PHP packages with Packagist |  O  |  O  |   O   |
 | [arvis-react-native](https://github.com/jopemachine/arvis-react-native)                  | Emmanouil Konstantinidis | Access the React Native Documentation from Arvis         |  O  |  O  |   O   |
+| [arvis-real-time-stock-price](http://weixia.info/)                                       | Wei Xia                  | show real time stock price in US market                  |  O  |  O  |   O   |
 | [arvis-simple-naver-search](https://github.com/jopemachine/arvis-simple-naver-search)    | jopemachine              | Simple naver search workflow for Arvis                   |  O  |  O  |   O   |
 | [arvis-vue](https://github.com/jopemachine/arvis-vue)                                    | Radimir Bitsov           | Search for Vue.js API references on vuejs.org            |  O  |  O  |   O   |
