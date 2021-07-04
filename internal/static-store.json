@@ -176,7 +176,7 @@
         "darrikonn.arvis-nym": {
             "description": "Synonyms and Antonyms Arvis workflow",
             "creator": "darrikonn",
-            "webAddress": "https://github.com/jopemachine/arvis-store#readme",
+            "webAddress": "https://github.com/jopemachine/arvis-nym#readme",
             "uploaded": 1625413431122,
             "installType": "npm"
         }
