@@ -20,7 +20,8 @@ export const searchWorkflow = async (input: string, options?: { order?: string }
   });
 
   if (options && options.order) {
-    return _.sortBy(items, options.order).reverse();
+    const [canSortItems, cannotSortItems] = _.partition(items, item => item[options.order!]);
+    return _.concat(_.sortBy(canSortItems, options.order).reverse(), cannotSortItems);
   }
 
   return items;
@@ -45,7 +46,8 @@ export const searchPlugin = async (input: string, options?: { order?: string }) 
   });
 
   if (options && options.order) {
-    return _.sortBy(items, options.order).reverse();
+    const [canSortItems, cannotSortItems] = _.partition(items, item => item[options.order!]);
+    return _.concat(_.sortBy(canSortItems, options.order).reverse(), cannotSortItems);
   }
 
   return items;
@@ -58,7 +60,8 @@ export const searchExtension = async (input: string, options?: { order?: string 
   ];
 
   if (options && options.order) {
-    return _.sortBy(extensions, options.order).reverse();
+    const [canSortItems, cannotSortItems] = _.partition(extensions, item => item[options.order!]);
+    return _.concat(_.sortBy(canSortItems, options.order).reverse(), cannotSortItems);
   }
 
   return extensions;
