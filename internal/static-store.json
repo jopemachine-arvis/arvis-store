@@ -161,6 +161,17 @@
             "webAddress": "https://github.com/jopemachine/arvis-polyglot",
             "uploaded": 1625321932718,
             "installType": "npm"
+        },
+        "Jinuk Baek.arvis-naver-search": {
+            "platform": [
+                "darwin",
+                "linux"
+            ],
+            "description": "Naver Search Kit",
+            "creator": "Jinuk Baek",
+            "webAddress": "https://www.jinukbaek.com/blog/ko/archives/216",
+            "uploaded": 1625398466610,
+            "installType": "local"
         }
     },
     "plugins": {
