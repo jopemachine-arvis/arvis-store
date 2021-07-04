@@ -172,6 +172,13 @@
             "webAddress": "https://www.jinukbaek.com/blog/ko/archives/216",
             "uploaded": 1625398466610,
             "installType": "local"
+        },
+        "darrikonn.arvis-nym": {
+            "description": "Synonyms and Antonyms Arvis workflow",
+            "creator": "darrikonn",
+            "webAddress": "https://github.com/jopemachine/arvis-store#readme",
+            "uploaded": 1625413431122,
+            "installType": "npm"
         }
     },
     "plugins": {
