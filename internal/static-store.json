@@ -25,8 +25,7 @@
             "description": "Lorem Ipsum generator in Arvis",
             "creator": "Anton Niklasson",
             "webAddress": "https://github.com/jopemachine/arvis-loremipsum",
-            "uploaded": 1625231989574,
-            "installType": "npm"
+            "uploaded": 1625231989574
         },
         "Radimir Bitsov.arvis-coolors": {
             "description": "🎨 Arvis workflow to generate color names",
