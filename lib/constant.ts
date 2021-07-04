@@ -6,3 +6,5 @@ export const workflowCompilationUrl = 'https://raw.githubusercontent.com/jopemac
 export const pluginCompilationUrl = 'https://raw.githubusercontent.com/jopemachine/arvis-store/master/template/plugin-template.md';
 
 export const extensionIconUrl = 'https://raw.githubusercontent.com/jopemachine/arvis-store/master/icons';
+
+export const extensionBinaryUrl = 'https://raw.githubusercontent.com/jopemachine/arvis-store/master/extensions';

@@ -17,5 +17,9 @@ Usage
     Otherwise, run
         $ arvis-store publish --local
 
+    To download local extension file, (bundleId is 'creator.name')
+        $ arvis-store download workflow [some_extension_bundleId]
+        $ arvis-store download plugin [some_extension_bundleId]
+
 See README.md for more details.
 `);

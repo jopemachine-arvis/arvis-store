@@ -8,13 +8,18 @@ import ora from 'ora';
 import path from 'path';
 import { getGithubApiKey, setGithubApiKey } from '../lib/conf';
 import { publish } from '../lib/publish';
+import { downloadExtension } from '../lib/download';
 import { searchExtension } from '../lib';
 import getHelpStr from './getHelpStr';
 
 const resolveInstallType = (flags: any) => {
   if (flags.npm) return 'npm';
   if (flags.local) return 'local';
-  return 'npm';
+  return undefined;
+};
+
+const inferInstallType = (pkgExist: boolean) => {
+  return pkgExist ? 'npm' : 'local';
 };
 
 const publishHandler = async (flags: any) => {
@@ -23,7 +28,7 @@ const publishHandler = async (flags: any) => {
     discardStdin: true
   }).start(chalk.whiteBright('Checking extension info..'));
 
-  const extensionFilePath = await findUp(['arvis-workflow.json', 'arvis-plugin.json']);
+  const extensionFilePath = await findUp(['arvis-workflow.json', 'arvis-plugin.json'], { type: 'file', allowSymlinks: false });
   if (!extensionFilePath) {
     spinner.fail('It seems current directory is not arvis extension directory.');
     process.exit(1);
@@ -34,9 +39,11 @@ const publishHandler = async (flags: any) => {
   const pkgExist = await fse.pathExists(pkgPath);
   const pkg = pkgExist ? await fse.readJSON(pkgPath) : undefined;
   const extensionInfo = await fse.readJSON(extensionFilePath);
-  const installType = resolveInstallType(flags);
 
-  if (!pkgExist && flags.npm) {
+  let installType = resolveInstallType(flags);
+  if (!installType) installType = inferInstallType(pkgExist);
+
+  if (!pkgExist && installType === 'npm') {
     spinner.fail('npm flags on, but package.json not found!');
     process.exit(1);
   }
@@ -48,16 +55,6 @@ const publishHandler = async (flags: any) => {
 
   const type = extensionFilePath.endsWith('arvis-workflow.json') ? 'workflow' : 'plugin';
   const { valid, errorMsg } = validate(extensionInfo, type);
-
-  let localInstallFile: Buffer | undefined;
-  if (flags.local) {
-    const installerFilePath = await findUp(`*.arvis${type}`);
-    if (!installerFilePath) {
-      spinner.fail(`local flags on, but *.arvis${type} file not found!`);
-      process.exit(1);
-    }
-    localInstallFile = await fse.readFile(installerFilePath);
-  }
 
   if (!valid) {
     throw new Error(errorMsg);
@@ -81,6 +78,16 @@ const publishHandler = async (flags: any) => {
   }
 
   const bundleId = `${creator}.${name}`;
+
+  let localInstallFile: Buffer | undefined;
+  if (installType === 'local') {
+    const installerFilePath = findUp.sync(`${bundleId}.arvis${type}`, { type: 'file', allowSymlinks: false });
+    if (!installerFilePath) {
+      spinner.fail(`local flags on, but '${bundleId}.arvis${type}' file not found!`);
+      process.exit(1);
+    }
+    localInstallFile = await fse.readFile(installerFilePath);
+  }
 
   spinner.start(chalk.whiteBright(`Creating a PR to add '${bundleId}' to arvis-store..`));
 
@@ -118,10 +125,11 @@ const viewHandler = async (input: string) => {
     return chalk.whiteBright(`${chalk.magentaBright(extension.name)}
 Type: ${chalk.yellow(extension.type)}
 Total downloads: ${chalk.greenBright(extension.dt ? extension.dt : '?')}
-Last week downloads: ${chalk.greenBright(extension.dw ? extension.dw: '?')}
+Last week downloads: ${chalk.greenBright(extension.dw ? extension.dw : '?')}
 Creator: ${chalk.green(extension.creator)}
 Description: ${chalk.cyan(extension.description ? extension.description : '(No description)')}
-`);}).join('\n');
+`);
+  }).join('\n');
 
   spinner.succeed('Search done.');
   console.log('\n' + result);
@@ -151,6 +159,14 @@ const cliFunc = async (input: string[], flags?: any) => {
   case 'pub':
   case 'publish':
     await publishHandler(flags);
+    break;
+
+  case 'download':
+    if (input[2] !== 'workflow' && input[2] !== 'plugin') {
+      throw new Error('extension type should be workflow or plguin');
+    }
+    await downloadExtension(input[2], input[3]);
+    break;
   }
 
   return '';
@@ -161,7 +177,7 @@ const cli = meow(getHelpStr(), {
     npm: {
       type: 'boolean',
       alias: 'n',
-      default: true,
+      default: false,
       isRequired: () => false,
     },
     local: {

@@ -1,6 +1,7 @@
 import got from 'got';
 import parseJson from 'parse-json';
 import {
+  extensionBinaryUrl,
   extensionIconUrl,
   pluginCompilationUrl,
   staticStoreUrl,
@@ -53,3 +54,11 @@ export const fetchExtensionIcon = async (type: 'workflow' | 'plugin', bundleId: 
   }
 };
 
+export const fetchExtensionBinary = async (type: 'workflow' | 'plugin', bundleId: string): Promise<any> => {
+  try {
+    const resp = await got(`${extensionBinaryUrl}/${type}/${bundleId}.arvis${type}`);
+    return (resp.body) as any;
+  } catch (err) {
+    throw new Error('Extension binary url not available');
+  }
+};
