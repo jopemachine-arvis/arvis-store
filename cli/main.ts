@@ -162,10 +162,10 @@ const cliFunc = async (input: string[], flags?: any) => {
     break;
 
   case 'download':
-    if (input[2] !== 'workflow' && input[2] !== 'plugin') {
+    if (input[1] !== 'workflow' && input[1] !== 'plugin') {
       throw new Error('extension type should be workflow or plguin');
     }
-    await downloadExtension(input[2], input[3]);
+    await downloadExtension(input[1], input[2]);
     break;
   }
 
