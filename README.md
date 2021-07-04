@@ -40,7 +40,10 @@ Usage
         $ arvis-store set-gh-api-key [github_api_key]
 
     To publish current extension directory to npm and arvis-store, run below command.
-        $ arvis-store publish
+    If the extension in uploaded on npm, run
+        $ arvis-store publish --npm
+    Otherwise, run
+        $ arvis-store publish --local
 
 See README.md for more details.
 ```
@@ -61,8 +64,18 @@ $ arvis-store set [github_personal_access_token]
 
 3. Run publish command
 
+If the extension in uploaded on npm,
+
+Run
+
 ```
-$ arvis-store publish
+$ arvis-store publish --npm
+```
+
+Otherwise, Run
+
+```
+$ arvis-store publish --local
 ```
 
 ## How it works

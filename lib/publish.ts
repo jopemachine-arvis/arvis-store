@@ -35,6 +35,8 @@ export const publish = async ({
   creator,
   description,
   iconPath,
+  installType,
+  localInstallFile,
   name,
   options,
   platform,
@@ -45,6 +47,8 @@ export const publish = async ({
   creator: string;
   description: string;
   iconPath?: string;
+  installType: string;
+  localInstallFile?: Buffer;
   name: string;
   options: any;
   platform: Record<string, unknown>;
@@ -117,6 +121,7 @@ export const publish = async ({
     creator,
     webAddress,
     uploaded,
+    installType
   };
 
   const title = firstPub ? `[bot] Add new ${type}, '${name}'` : `[bot] Update ${type}, '${name}'`;
@@ -138,14 +143,17 @@ export const publish = async ({
     repo: 'arvis-store',
     changes: [
       {
-        /* optional: if `files` is not passed, an empty commit is created instead */
         files: {
           [docPath]: doc,
+          'internal/static-store.json': JSON.stringify(staticStore, null, 4),
           [`icons/${type}/${bundleId}.png`]: icon ? {
             content: Buffer.from(icon).toString('base64'),
             encoding: 'base64',
           } : null,
-          'internal/static-store.json': JSON.stringify(staticStore, null, 4),
+          [`extensions/${type}/${bundleId}.arvis${type}`]: localInstallFile ? {
+            content: Buffer.from(localInstallFile).toString('base64'),
+            encodeURI: 'base64'
+          } : null,
         },
         commit: commitMessage,
       },

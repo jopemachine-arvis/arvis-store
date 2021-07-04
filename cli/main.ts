@@ -11,6 +11,12 @@ import { publish } from '../lib/publish';
 import { searchExtension } from '../lib';
 import getHelpStr from './getHelpStr';
 
+const resolveInstallType = (flags: any) => {
+  if (flags.npm) return 'npm';
+  if (flags.local) return 'local';
+  return 'npm';
+};
+
 const publishHandler = async (flags: any) => {
   const spinner = ora({
     color: 'cyan',
@@ -28,6 +34,12 @@ const publishHandler = async (flags: any) => {
   const pkgExist = await fse.pathExists(pkgPath);
   const pkg = pkgExist ? await fse.readJSON(pkgPath) : undefined;
   const extensionInfo = await fse.readJSON(extensionFilePath);
+  const installType = resolveInstallType(flags);
+
+  if (!pkgExist && flags.npm) {
+    spinner.fail('npm flags on, but package.json not found!');
+    process.exit(1);
+  }
 
   if (pkgExist && (pkg.name !== extensionInfo.name)) {
     spinner.fail('Make sure the package name is the same as the extension name.');
@@ -36,6 +48,16 @@ const publishHandler = async (flags: any) => {
 
   const type = extensionFilePath.endsWith('arvis-workflow.json') ? 'workflow' : 'plugin';
   const { valid, errorMsg } = validate(extensionInfo, type);
+
+  let localInstallFile: Buffer | undefined;
+  if (flags.local) {
+    const installerFilePath = await findUp(`*.arvis${type}`);
+    if (!installerFilePath) {
+      spinner.fail(`local flags on, but *.arvis${type} file not found!`);
+      process.exit(1);
+    }
+    localInstallFile = await fse.readFile(installerFilePath);
+  }
 
   if (!valid) {
     throw new Error(errorMsg);
@@ -68,6 +90,8 @@ const publishHandler = async (flags: any) => {
       creator,
       description,
       iconPath,
+      installType,
+      localInstallFile,
       name,
       options: flags,
       platform,
@@ -134,6 +158,18 @@ const cliFunc = async (input: string[], flags?: any) => {
 
 const cli = meow(getHelpStr(), {
   flags: {
+    npm: {
+      type: 'boolean',
+      alias: 'n',
+      default: true,
+      isRequired: () => false,
+    },
+    local: {
+      type: 'boolean',
+      alias: 'l',
+      default: false,
+      isRequired: () => false,
+    }
   }
 });
 
