@@ -186,6 +186,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-prettier",
             "uploaded": 1625495637473,
             "installType": "npm"
+        },
+        "anshumanv.arvis-github-notifications": {
+            "description": "Workflow to take control of your github notifications",
+            "creator": "anshumanv",
+            "webAddress": "https://github.com/anshumanv",
+            "uploaded": 1625501004145,
+            "installType": "npm"
         }
     },
     "plugins": {
