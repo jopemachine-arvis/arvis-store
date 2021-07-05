@@ -207,6 +207,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-mdn",
             "uploaded": 1625505543126,
             "installType": "npm"
+        },
+        "leozhang2018.arvis-httpstat": {
+            "description": "httpstat visualizes",
+            "creator": "leozhang2018",
+            "webAddress": "https://github.com/jopemachine/arvis-httpstat",
+            "uploaded": 1625506408729,
+            "installType": "npm"
         }
     },
     "plugins": {
