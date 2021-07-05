@@ -1,4 +1,5 @@
 import fse from 'fs-extra';
+import path from 'path';
 import { fetchExtensionBinary } from './arvisStoreApi';
 
 const base64ToBuffer = (b64string: string) => {
@@ -15,10 +16,18 @@ const base64ToBuffer = (b64string: string) => {
   return buffer;
 };
 
-const downloadExtension = async function (type: 'workflow' | 'plugin', bundleId: string) {
+const downloadExtension = async function (
+  type: 'workflow' | 'plugin',
+  bundleId: string,
+  options: { path?: string } = {}
+): Promise<string | undefined> {
   try {
     const blob = await fetchExtensionBinary(type, bundleId);
-    await fse.writeFile(`${bundleId}.arvis${type}`, base64ToBuffer(blob));
+    const basePath = options.path ? options.path : process.cwd();
+    const dst = path.resolve(basePath, `${bundleId}.arvis${type}`);
+    await fse.writeFile(dst, base64ToBuffer(blob));
+
+    return dst;
   } catch {
     console.error('File not found. double check the extension\'s install type is local.');
   }
