@@ -200,6 +200,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-mvns",
             "uploaded": 1625504489972,
             "installType": "npm"
+        },
+        "Klaas Cuvelier.arvis-mdn": {
+            "description": "Search through the MDN documentation",
+            "creator": "Klaas Cuvelier",
+            "webAddress": "https://github.com/jopemachine/arvis-mdn",
+            "uploaded": 1625505543126,
+            "installType": "npm"
         }
     },
     "plugins": {
