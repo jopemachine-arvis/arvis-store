@@ -121,13 +121,6 @@
             "uploaded": 1625320014232,
             "installType": "npm"
         },
-        "jopemachine.arvis-chrome-workflow": {
-            "description": "Chrome kernel based broswer workflow for Arvis 4",
-            "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-chrome-workflow",
-            "uploaded": 1625320500297,
-            "installType": "npm"
-        },
         "jopemachine.arvis-evernote-workflow": {
             "description": "Arvis evernote workflow",
             "creator": "jopemachine",
