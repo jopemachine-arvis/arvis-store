@@ -274,6 +274,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-iconfinder-search",
             "uploaded": 1625586361537,
             "installType": "npm"
+        },
+        "Eugene Lerman.arvis-torrent-search": {
+            "description": "Search a bunch of trackers for stuff",
+            "creator": "Eugene Lerman",
+            "webAddress": "https://github.com/jopemachine/arvis-torrent-search",
+            "uploaded": 1625588147039,
+            "installType": "npm"
         }
     },
     "plugins": {
