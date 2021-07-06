@@ -242,6 +242,17 @@
             "webAddress": "https://github.com/jopemachine/arvis-awesome-search",
             "uploaded": 1625548505859,
             "installType": "npm"
+        },
+        "importre.arvis-tidy-workflow": {
+            "platform": [
+                "darwin",
+                "linux"
+            ],
+            "description": "Arvis workflow to beautify JSON/XML in clipboard",
+            "creator": "importre",
+            "webAddress": "https://github.com/jopemachine/arvis-tidy-workflow",
+            "uploaded": 1625549386399,
+            "installType": "npm"
         }
     },
     "plugins": {
