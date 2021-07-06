@@ -221,6 +221,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-rxjs",
             "uploaded": 1625546373954,
             "installType": "npm"
+        },
+        "anoff.arvis-github-repo-search": {
+            "description": "arvis workflow to find github repos",
+            "creator": "anoff",
+            "webAddress": "https://github.com/jopemachine/arvis-github-repo-search",
+            "uploaded": 1625546986488,
+            "installType": "npm"
         }
     },
     "plugins": {
