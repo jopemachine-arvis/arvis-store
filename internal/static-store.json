@@ -235,6 +235,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-aws",
             "uploaded": 1625547706498,
             "installType": "npm"
+        },
+        "importre.arvis-awesome-search": {
+            "description": "Search awesome projects!",
+            "creator": "importre",
+            "webAddress": "https://github.com/jopemachine/arvis-awesome-search",
+            "uploaded": 1625548505859,
+            "installType": "npm"
         }
     },
     "plugins": {
