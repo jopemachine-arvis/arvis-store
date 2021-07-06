@@ -253,6 +253,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-tidy-workflow",
             "uploaded": 1625549386399,
             "installType": "npm"
+        },
+        "hanwen huang.arvis-google-translate": {
+            "description": "Arvis workflow to translate with google tanslate api",
+            "creator": "hanwen huang",
+            "webAddress": "https://github.com/jopemachine/arvis-google-translate#readme",
+            "uploaded": 1625570953144,
+            "installType": "npm"
         }
     },
     "plugins": {
