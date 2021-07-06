@@ -10,6 +10,7 @@ import { getGithubApiKey, setGithubApiKey } from '../lib/conf';
 import { publish } from '../lib/publish';
 import { downloadExtension } from '../lib/download';
 import { searchExtension } from '../lib';
+import { unpublish } from '../lib/unpublish';
 import getHelpStr from './getHelpStr';
 
 const resolveInstallType = (flags: any) => {
@@ -20,6 +21,26 @@ const resolveInstallType = (flags: any) => {
 
 const inferInstallType = (pkgExist: boolean) => {
   return pkgExist ? 'npm' : 'local';
+};
+
+const unpublishHandler = async (creator: string, name: string) => {
+  const spinner = ora({
+    color: 'cyan',
+    discardStdin: true
+  }).start(chalk.whiteBright(`Creating a PR to delete '${name}' to arvis-store..`));
+
+  try {
+    await unpublish({
+      creator,
+      name,
+      apiKey: getGithubApiKey(),
+    });
+  } catch (err) {
+    spinner.fail(err);
+    process.exit(1);
+  }
+
+  spinner.succeed('Works done.');
 };
 
 const publishHandler = async (flags: any) => {
@@ -159,6 +180,10 @@ const cliFunc = async (input: string[], flags?: any) => {
   case 'pub':
   case 'publish':
     await publishHandler(flags);
+    break;
+
+  case 'unpublish':
+    await unpublishHandler(input[1], input[2]);
     break;
 
   case 'download':

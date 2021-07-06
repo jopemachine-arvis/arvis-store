@@ -1,5 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!! This file remove extension from only local file !!!
+// !!! To remove extension from store, use unpublish.  !!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 const chalk = require('chalk');
 const fse = require('fs-extra');
 const store = require('../internal/store');

@@ -29,7 +29,7 @@ const downloadExtension = async function (
 
     return dst;
   } catch {
-    console.error('File not found. double check the extension\'s install type is local.');
+    console.error('File not found. Please double check the extension\'s install type is local.');
   }
 };
 

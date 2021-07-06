@@ -45,15 +45,21 @@ const updateInfo = async (bundleId: string) => {
 };
 
 (async () => {
-  const store = await fetchStaticStore();
-  const workflowBundleIds: string[] = Object.keys(store.workflows);
-  const pluginBundleIds: string[] = Object.keys(store.plugins);
+  const staticStore = await fetchStaticStore();
+  const workflowBundleIds: string[] = Object.keys(staticStore.workflows);
+  const pluginBundleIds: string[] = Object.keys(staticStore.plugins);
 
   const workflowNewInfos = (await Promise.allSettled(workflowBundleIds.map(updateInfo))).filter((item: any) => item.status === 'fulfilled').map((item: any) => (item as any).value);
   const renewedWorkflows = Object.assign({}, ...workflowNewInfos);
 
   const pluginNewInfos = (await Promise.allSettled(pluginBundleIds.map(updateInfo))).filter((item: any) => item.status === 'fulfilled').map((item: any) => (item as any).value);
   const renewedPlugins = Object.assign({}, ...pluginNewInfos);
+
+  const store = {
+    updated: new Date().getTime(),
+    workflows: renewedWorkflows,
+    plugins: renewedPlugins,
+  };
 
   await octokit.repos.createOrUpdateFiles({
     owner: 'jopemachine',
@@ -64,10 +70,7 @@ const updateInfo = async (bundleId: string) => {
       {
         message: '[bot] Update store',
         files: {
-          'internal/store.json': JSON.stringify({
-            workflows: renewedWorkflows,
-            plugins: renewedPlugins,
-          }),
+          'internal/store.json': JSON.stringify(store),
         },
       }
     ],

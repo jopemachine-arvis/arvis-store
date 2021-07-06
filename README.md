@@ -16,40 +16,55 @@ Publish and Retrieve Arvis extension info
 
 * [Click me to check available Plugins](./docs/plugin-links.md)
 
-## Usage
-
-```js
-const { searchExtension } = require('arvis-store');
-
-(async () => {
-   const result = await searchExtension('some_extension_name');
-}) ();
-```
-
 ## Usage - cli
 
+### view
+
+To view some extension info, run below command.
+
 ```
-Usage
+$ arvis-store view [some_extension_name]
+```
 
-    To view some extension info, run below command.
-        $ arvis-store view [some_extension_name]
+### set github token
 
-    To publish arvis extension to store, need to set github api key first.
-    Run below command to set github api key.
-        $ arvis-store set-gh-api-key [github_api_key]
-        $ arvis-store set [github_api_key]
+To publish arvis extension to store, need to set github api key first.
+Run below command to set github api key.
 
-    To publish current extension directory to npm and arvis-store, run below command.
-    If the extension in uploaded on npm, run
-        $ arvis-store publish --npm
-    Otherwise, run
-        $ arvis-store publish --local
+```
+$ arvis-store set-gh-api-key [github_api_key]
+```
 
-    To download local extension file, (bundleId is 'creator.name')
-        $ arvis-store download workflow [some_extension_bundleId]
-        $ arvis-store download plugin [some_extension_bundleId]
+### publish
 
-See README.md for more details.
+To publish current extension directory to npm and arvis-store, run below command.
+If the extension in uploaded on npm, run
+
+```
+$ arvis-store publish --npm
+```
+
+Otherwise, run
+
+```
+$ arvis-store publish --local
+```
+
+### download
+
+To download local extension file, (bundleId is 'creator.name')
+
+```
+$ arvis-store download workflow [some_extension_bundleId]
+$ arvis-store download plugin [some_extension_bundleId]
+```
+
+### unpublish
+
+To unpublish extension from store, run
+
+```
+$ arvis-store [creator_name] [extension_name]
 ```
 
 ## How to add arvis-extension to arvis-store
@@ -91,6 +106,7 @@ $ arvis-store publish --local
 3. `internal/statis-store.json`'s information updates only when extensions are created or need to be changed by the extension creator
 
 4. `arvis-store publish` command creates a PR that adds your extension to the `internal/static-store.json`.
+
 
 ## Related
 
