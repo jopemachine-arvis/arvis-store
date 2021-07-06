@@ -254,11 +254,11 @@
             "uploaded": 1625549386399,
             "installType": "npm"
         },
-        "hanwen huang.arvis-google-translate": {
-            "description": "Arvis workflow to translate with google tanslate api",
+        "hanwen huang.arvis-language-configuration": {
+            "description": "The pre-workfow of Google Translate for config language pair",
             "creator": "hanwen huang",
-            "webAddress": "https://github.com/jopemachine/arvis-google-translate#readme",
-            "uploaded": 1625570953144,
+            "webAddress": "https://github.com/jopemachine/arvis-language-configuration#readme",
+            "uploaded": 1625571066108,
             "installType": "npm"
         }
     },
