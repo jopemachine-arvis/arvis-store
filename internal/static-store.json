@@ -214,6 +214,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-httpstat",
             "uploaded": 1625506408729,
             "installType": "npm"
+        },
+        "Sam Verschueren.arvis-rxjs-workflow": {
+            "description": "Search through the RxJS documentation",
+            "creator": "Sam Verschueren",
+            "webAddress": "https://github.com/jopemachine/arvis-rxjs",
+            "uploaded": 1625546373954,
+            "installType": "npm"
         }
     },
     "plugins": {
