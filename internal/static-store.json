@@ -228,6 +228,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-github-repo-search",
             "uploaded": 1625546986488,
             "installType": "npm"
+        },
+        "Sam Verschueren.arvis-aws": {
+            "description": "Search through the AWS JavaScript SDK",
+            "creator": "Sam Verschueren",
+            "webAddress": "https://github.com/jopemachine/arvis-aws",
+            "uploaded": 1625547706498,
+            "installType": "npm"
         }
     },
     "plugins": {
