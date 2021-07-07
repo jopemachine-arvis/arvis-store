@@ -288,6 +288,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-translate-history#readme",
             "uploaded": 1625637522206,
             "installType": "npm"
+        },
+        "prashantpalikhe.arvis-webpack": {
+            "description": "Arvis workflow for Webpack documentation",
+            "creator": "prashantpalikhe",
+            "webAddress": "https://github.com/jopemachine/arvis-webpack",
+            "uploaded": 1625638667950,
+            "installType": "npm"
         }
     },
     "plugins": {
