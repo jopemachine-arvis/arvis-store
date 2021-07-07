@@ -281,6 +281,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-torrent-search",
             "uploaded": 1625588147039,
             "installType": "npm"
+        },
+        "hanwen huang.arvis-translate-history": {
+            "description": "Arvis workflow arvis-google-translate history",
+            "creator": "hanwen huang",
+            "webAddress": "https://github.com/jopemachine/arvis-translate-history#readme",
+            "uploaded": 1625637522206,
+            "installType": "npm"
         }
     },
     "plugins": {
