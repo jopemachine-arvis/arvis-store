@@ -7,6 +7,7 @@ import {
 import _ from 'lodash';
 import alphaSort from 'alpha-sort';
 import fse from 'fs-extra';
+import shortHash from 'shorthash2';
 
 const markdownTable = require('markdown-table');
 let { Octokit } = require('@octokit/core');
@@ -125,13 +126,13 @@ export const publish = async ({
   };
 
   const title = firstPub ? `[bot] Add new ${type}, '${name}'` : `[bot] Update ${type}, '${name}'`;
-  const head = firstPub ? `bot-add-${creator.split(' ').join('-')}-${name}` : `bot-update-${creator.split(' ').join('-')}-${name}`;
   const commitMessage = firstPub ? `[bot] Add new ${type}, '${name}'` : `[bot] Update new ${type}, '${name}'`;
   const body = firstPub ?
     `## Add new extension\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}` :
     `## Update extension info\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Description: ${description}`;
 
   const icon = iconPath ? await fse.readFile(iconPath) : undefined;
+  const head = shortHash(`${creator}@${name}@${new Date().getTime()}`);
 
   // Create a PR adding new extension
   octokit.createPullRequest({

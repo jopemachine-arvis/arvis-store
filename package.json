@@ -1,6 +1,6 @@
 {
   "name": "arvis-store",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Publish and Retrieve Arvis extension info",
   "main": "dist/lib/index.js",
   "bin": {
@@ -31,6 +31,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/fs-extra": "^9.0.11",
+    "@types/is-url": "^1.2.29",
     "@types/lodash": "^4.14.170",
     "@types/node": "^15.12.5",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
@@ -53,13 +54,15 @@
     "find-up": "^5.0.0",
     "fs-extra": "^10.0.0",
     "got": "^11.8.2",
+    "is-url": "^1.2.4",
     "lodash": "^4.17.21",
     "markdown-table": "^2.0.0",
     "meow": "^9.0.0",
     "octokit-commit-multiple-files": "^3.2.1",
     "octokit-plugin-create-pull-request": "^3.9.3",
     "ora": "^5.4.1",
-    "parse-json": "^5.2.0"
+    "parse-json": "^5.2.0",
+    "shorthash2": "^1.0.3"
   },
   "husky": {
     "hooks": {
