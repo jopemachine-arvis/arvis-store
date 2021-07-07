@@ -3,7 +3,6 @@ import findUp from 'find-up';
 import ora from 'ora';
 import path from 'path';
 import fse from 'fs-extra';
-import isUrl from 'is-url';
 import { validate } from 'arvis-extension-validator';
 import { publish } from '../lib';
 import { getGithubApiKey } from '../lib/conf';
@@ -50,42 +49,20 @@ export const publishHandler = async (flags: any) => {
   }
 
   const type = extensionFilePath.endsWith('arvis-workflow.json') ? 'workflow' : 'plugin';
-  const { valid, errorMsg } = validate(extensionInfo, type);
+  const { valid, errorMsg } = validate(extensionInfo, type, { strict: true });
 
   if (!valid) {
     throw new Error(errorMsg);
   }
 
-  let iconPath: string | undefined;
   const { creator, name, description, platform, webAddress, defaultIcon, version } = extensionInfo;
-
-  if (!webAddress || !isUrl(webAddress)) {
-    spinner.fail('Please type valid \'webAddress\' value of extension');
-    process.exit(1);
-  }
-  if (!description) {
-    spinner.fail('Please type valid \'description\' value of extension');
-    process.exit(1);
-  }
-  if (!version) {
-    spinner.fail('Please type valid \'version\' value of extension');
-    process.exit(1);
-  }
-  if (platform && (!platform.length || platform.length === 0)) {
-    spinner.fail('Please type valid \'platform\' value of extension');
-    process.exit(1);
-  }
 
   if (pkgExist && (pkg.version !== extensionInfo.version)) {
     spinner.fail('Make sure the package version is the same as the extension version.');
     process.exit(1);
   }
 
-  if (!defaultIcon) {
-    spinner.warn('Extension don\'t have dafault icon. Recommend to use icon on extension');
-  } else {
-    iconPath = path.isAbsolute(defaultIcon) ? defaultIcon : path.resolve(extensionDir, defaultIcon);
-  }
+  const iconPath: string = path.isAbsolute(defaultIcon) ? defaultIcon : path.resolve(extensionDir, defaultIcon);
 
   const bundleId = `${creator}.${name}`;
 

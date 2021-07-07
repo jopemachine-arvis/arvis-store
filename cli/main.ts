@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import chalk from 'chalk';
 import meow from 'meow';
+import cleanStack from 'clean-stack';
 import { setGithubApiKey } from '../lib/conf';
 import { downloadExtension } from '../lib/download';
 import getHelpStr from './getHelpStr';
@@ -68,5 +69,10 @@ const cli = meow(getHelpStr(), {
 });
 
 (async () => {
-  console.log(await cliFunc(cli.input, cli.flags));
+  try {
+    console.log(await cliFunc(cli.input, cli.flags));
+  } catch (err){
+    console.error(cleanStack(chalk.redBright('\n\n' + err)));
+    process.exit(1);
+  }
 })();
