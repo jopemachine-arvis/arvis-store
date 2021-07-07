@@ -309,6 +309,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-show-network-info#readme",
             "uploaded": 1625660997919,
             "installType": "npm"
+        },
+        "Jeppe Staerk.arvis-currency-conversion": {
+            "description": "Foreign exchange rates and currency conversion",
+            "creator": "Jeppe Staerk",
+            "webAddress": "https://github.com/jopemachine/arvis-currency-conversion#readme",
+            "uploaded": 1625662218215,
+            "installType": "npm"
         }
     },
     "plugins": {
