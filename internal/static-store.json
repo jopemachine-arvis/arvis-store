@@ -295,6 +295,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-webpack",
             "uploaded": 1625638667950,
             "installType": "npm"
+        },
+        "mblode.arvis-trello": {
+            "description": "Trello for arvis",
+            "creator": "mblode",
+            "webAddress": "https://github.com/jopemachine/arvis-trello#readme",
+            "uploaded": 1625641390392,
+            "installType": "npm"
         }
     },
     "plugins": {
