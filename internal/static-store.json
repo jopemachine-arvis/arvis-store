@@ -302,6 +302,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-trello#readme",
             "uploaded": 1625641390392,
             "installType": "npm"
+        },
+        "Jeppe Staerk.arvis-show-network-info": {
+            "description": "See network info and local devices",
+            "creator": "Jeppe Staerk",
+            "webAddress": "https://github.com/jopemachine/arvis-show-network-info#readme",
+            "uploaded": 1625660997919,
+            "installType": "npm"
         }
     },
     "plugins": {
