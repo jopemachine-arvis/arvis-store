@@ -323,6 +323,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-httpstatuses",
             "uploaded": 1625663956516,
             "installType": "npm"
+        },
+        "importre.arvis-figlet": {
+            "description": "arvis workflow to asciify plain text using figlet.js",
+            "creator": "importre",
+            "webAddress": "https://github.com/jopemachine/arvis-figlet",
+            "uploaded": 1625745582090,
+            "installType": "npm"
         }
     },
     "plugins": {
