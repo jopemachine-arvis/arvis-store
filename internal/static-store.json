@@ -3,77 +3,77 @@
         "SamVerschueren.arvis-font-awesome": {
             "description": "Arvis workflow to search for font-awesome icons",
             "creator": "SamVerschueren",
-            "webAddress": "https://github.com/jopemachine/arvis-font-awesome",
+            "webAddress": "https://github.com/arvis-workflows/arvis-font-awesome",
             "uploaded": 1625229314754,
             "installType": "npm"
         },
         "Sindre Sorhus.arvis-npms": {
             "description": "Arvis workflow to search for npm packages with npms.io",
             "creator": "Sindre Sorhus",
-            "webAddress": "https://github.com/jopemachine/arvis-npms",
+            "webAddress": "https://github.com/arvis-workflows/arvis-npms",
             "uploaded": 1625230304273,
             "installType": "npm"
         },
         "Radimir Bitsov.arvis-vue": {
             "description": "Search for Vue.js API references on vuejs.org",
             "creator": "Radimir Bitsov",
-            "webAddress": "https://github.com/jopemachine/arvis-vue",
+            "webAddress": "https://github.com/arvis-workflows/arvis-vue",
             "uploaded": 1625230992545,
             "installType": "npm"
         },
         "Anton Niklasson.arvis-loremipsum": {
             "description": "Lorem Ipsum generator in Arvis",
             "creator": "Anton Niklasson",
-            "webAddress": "https://github.com/jopemachine/arvis-loremipsum",
+            "webAddress": "https://github.com/arvis-workflows/arvis-loremipsum",
             "uploaded": 1625231989574,
             "installType": "npm"
         },
         "Radimir Bitsov.arvis-coolors": {
             "description": "🎨 Arvis workflow to generate color names",
             "creator": "Radimir Bitsov",
-            "webAddress": "https://github.com/jopemachine/arvis-coolors",
+            "webAddress": "https://github.com/arvis-workflows/arvis-coolors",
             "uploaded": 1625232213052,
             "installType": "npm"
         },
         "Sam Verschueren.arvis-fkill": {
             "description": "Arvis workflow to fabulously search and kill processes",
             "creator": "Sam Verschueren",
-            "webAddress": "https://github.com/jopemachine/arvis-fkill",
+            "webAddress": "https://github.com/arvis-workflows/arvis-fkill",
             "uploaded": 1625233660764,
             "installType": "npm"
         },
         "Sindre Sorhus.arvis-emoji": {
             "description": "Arvis workflow to find relevant emoji from text",
             "creator": "Sindre Sorhus",
-            "webAddress": "https://github.com/jopemachine/arvis-emoji",
+            "webAddress": "https://github.com/arvis-workflows/arvis-emoji",
             "uploaded": 1625234750935,
             "installType": "npm"
         },
         "jopemachine.arvis-simple-naver-search": {
             "description": "Simple naver search workflow for Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-simple-naver-search",
+            "webAddress": "https://github.com/arvis-workflows/arvis-simple-naver-search",
             "uploaded": 1625234844511,
             "installType": "npm"
         },
         "Sam Verschueren.arvis-css-triggers": {
             "description": "Arvis workflow to search through csstriggers.com",
             "creator": "Sam Verschueren",
-            "webAddress": "https://github.com/jopemachine/arvis-css-triggers",
+            "webAddress": "https://github.com/arvis-workflows/arvis-css-triggers",
             "uploaded": 1625235458250,
             "installType": "npm"
         },
         "Emmanouil Konstantinidis.arvis-react-native": {
             "description": "Access the React Native Documentation from Arvis",
             "creator": "Emmanouil Konstantinidis",
-            "webAddress": "https://github.com/jopemachine/arvis-react-native",
+            "webAddress": "https://github.com/arvis-workflows/arvis-react-native",
             "uploaded": 1625235742751,
             "installType": "npm"
         },
         "Vincent Klaiber.arvis-packagist": {
             "description": "Arvis workflow to search for PHP packages with Packagist",
             "creator": "Vincent Klaiber",
-            "webAddress": "https://github.com/jopemachine/arvis-packagist",
+            "webAddress": "https://github.com/arvis-workflows/arvis-packagist",
             "uploaded": 1625236061153,
             "installType": "npm"
         },
@@ -83,14 +83,14 @@
             ],
             "description": "Lock your Mac",
             "creator": "Sindre Sorhus",
-            "webAddress": "https://github.com/jopemachine/arvis-mac-lock",
+            "webAddress": "https://github.com/arvis-workflows/arvis-mac-lock",
             "uploaded": 1625236781130,
             "installType": "npm"
         },
         "jopemachine.arvis-extension-updater": {
             "description": "Arvis extension updater",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-extension-updater",
+            "webAddress": "https://github.com/arvis-workflows/arvis-extension-updater",
             "uploaded": 1625240254276,
             "installType": "npm"
         },
@@ -100,14 +100,14 @@
             ],
             "description": "Arvis workflow to toggle the system dark mode",
             "creator": "Sindre Sorhus",
-            "webAddress": "https://github.com/jopemachine/arvis-mac-dark-mode",
+            "webAddress": "https://github.com/arvis-workflows/arvis-mac-dark-mode",
             "uploaded": 1625241667785,
             "installType": "npm"
         },
         "Radimir Bitsov.arvis-keycode": {
             "description": "⌨ Arivs workflow to get JavaScript keycodes.",
             "creator": "Radimir Bitsov",
-            "webAddress": "https://github.com/jopemachine/arvis-keycode",
+            "webAddress": "https://github.com/arvis-workflows/arvis-keycode",
             "uploaded": 1625320112730,
             "installType": "npm"
         },
@@ -117,21 +117,21 @@
             ],
             "description": "Highlight your code stored in clipboard",
             "creator": "importre",
-            "webAddress": "https://github.com/jopemachine/arvis-hl",
+            "webAddress": "https://github.com/arvis-workflows/arvis-hl",
             "uploaded": 1625320014232,
             "installType": "npm"
         },
         "jopemachine.arvis-chrome-workflow": {
             "description": "Chrome kernel based broswer workflow for Arvis 4",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-chrome-workflow",
+            "webAddress": "https://github.com/arvis-workflows/arvis-chrome-workflow",
             "uploaded": 1625320500297,
             "installType": "npm"
         },
         "jopemachine.arvis-evernote-workflow": {
             "description": "Arvis evernote workflow",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-evernote-workflow#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-evernote-workflow#readme",
             "uploaded": 1625320635746,
             "installType": "npm"
         },
@@ -158,7 +158,7 @@
             ],
             "description": "Translate text with ease using Google Translate",
             "creator": "nikersify",
-            "webAddress": "https://github.com/jopemachine/arvis-polyglot",
+            "webAddress": "https://github.com/arvis-workflows/arvis-polyglot",
             "uploaded": 1625321932718,
             "installType": "npm"
         },
@@ -176,14 +176,14 @@
         "darrikonn.arvis-nym": {
             "description": "Synonyms and Antonyms Arvis workflow",
             "creator": "darrikonn",
-            "webAddress": "https://github.com/jopemachine/arvis-nym#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-nym#readme",
             "uploaded": 1625413431122,
             "installType": "npm"
         },
         "Keyan Zhang.arvis-prettier": {
             "description": "Run Prettier in Arvis",
             "creator": "Keyan Zhang",
-            "webAddress": "https://github.com/jopemachine/arvis-prettier",
+            "webAddress": "https://github.com/arvis-workflows/arvis-prettier",
             "uploaded": 1625495637473,
             "installType": "npm"
         },
@@ -197,49 +197,49 @@
         "xfslove.arvis-mvns": {
             "description": "Search for java libraries at maven central repository",
             "creator": "xfslove",
-            "webAddress": "https://github.com/jopemachine/arvis-mvns",
+            "webAddress": "https://github.com/arvis-workflows/arvis-mvns",
             "uploaded": 1625504489972,
             "installType": "npm"
         },
         "Klaas Cuvelier.arvis-mdn": {
             "description": "Search through the MDN documentation",
             "creator": "Klaas Cuvelier",
-            "webAddress": "https://github.com/jopemachine/arvis-mdn",
+            "webAddress": "https://github.com/arvis-workflows/arvis-mdn",
             "uploaded": 1625505543126,
             "installType": "npm"
         },
         "leozhang2018.arvis-httpstat": {
             "description": "httpstat visualizes",
             "creator": "leozhang2018",
-            "webAddress": "https://github.com/jopemachine/arvis-httpstat",
+            "webAddress": "https://github.com/arvis-workflows/arvis-httpstat",
             "uploaded": 1625506408729,
             "installType": "npm"
         },
         "Sam Verschueren.arvis-rxjs-workflow": {
             "description": "Search through the RxJS documentation",
             "creator": "Sam Verschueren",
-            "webAddress": "https://github.com/jopemachine/arvis-rxjs",
+            "webAddress": "https://github.com/arvis-workflows/arvis-rxjs",
             "uploaded": 1625546373954,
             "installType": "npm"
         },
         "anoff.arvis-github-repo-search": {
             "description": "arvis workflow to find github repos",
             "creator": "anoff",
-            "webAddress": "https://github.com/jopemachine/arvis-github-repo-search",
+            "webAddress": "https://github.com/arvis-workflows/arvis-github-repo-search",
             "uploaded": 1625546986488,
             "installType": "npm"
         },
         "Sam Verschueren.arvis-aws": {
             "description": "Search through the AWS JavaScript SDK",
             "creator": "Sam Verschueren",
-            "webAddress": "https://github.com/jopemachine/arvis-aws",
+            "webAddress": "https://github.com/arvis-workflows/arvis-aws",
             "uploaded": 1625547706498,
             "installType": "npm"
         },
         "importre.arvis-awesome-search": {
             "description": "Search awesome projects!",
             "creator": "importre",
-            "webAddress": "https://github.com/jopemachine/arvis-awesome-search",
+            "webAddress": "https://github.com/arvis-workflows/arvis-awesome-search",
             "uploaded": 1625548505859,
             "installType": "npm"
         },
@@ -250,84 +250,84 @@
             ],
             "description": "Arvis workflow to beautify JSON/XML in clipboard",
             "creator": "importre",
-            "webAddress": "https://github.com/jopemachine/arvis-tidy-workflow",
+            "webAddress": "https://github.com/arvis-workflows/arvis-tidy-workflow",
             "uploaded": 1625549386399,
             "installType": "npm"
         },
         "hanwen huang.arvis-google-translate": {
             "description": "Arvis workflow to translate with google tanslate api",
             "creator": "hanwen huang",
-            "webAddress": "https://github.com/jopemachine/arvis-google-translate#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-google-translate#readme",
             "uploaded": 1625570953144,
             "installType": "npm"
         },
         "hanwen huang.arvis-language-configuration": {
             "description": "The pre-workfow of Google Translate for config language pair",
             "creator": "hanwen huang",
-            "webAddress": "https://github.com/jopemachine/arvis-language-configuration#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-language-configuration#readme",
             "uploaded": 1625571425853,
             "installType": "npm"
         },
         "Rawnly.arvis-iconfinder-search": {
             "description": "Arvis workflow for Iconfinder instant search",
             "creator": "Rawnly",
-            "webAddress": "https://github.com/jopemachine/arvis-iconfinder-search",
+            "webAddress": "https://github.com/arvis-workflows/arvis-iconfinder-search",
             "uploaded": 1625586361537,
             "installType": "npm"
         },
         "Eugene Lerman.arvis-torrent-search": {
             "description": "Search a bunch of trackers for stuff",
             "creator": "Eugene Lerman",
-            "webAddress": "https://github.com/jopemachine/arvis-torrent-search",
+            "webAddress": "https://github.com/arvis-workflows/arvis-torrent-search",
             "uploaded": 1625588147039,
             "installType": "npm"
         },
         "hanwen huang.arvis-translate-history": {
             "description": "Arvis workflow arvis-google-translate history",
             "creator": "hanwen huang",
-            "webAddress": "https://github.com/jopemachine/arvis-translate-history#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-translate-history#readme",
             "uploaded": 1625637522206,
             "installType": "npm"
         },
         "prashantpalikhe.arvis-webpack": {
             "description": "Arvis workflow for Webpack documentation",
             "creator": "prashantpalikhe",
-            "webAddress": "https://github.com/jopemachine/arvis-webpack",
+            "webAddress": "https://github.com/arvis-workflows/arvis-webpack",
             "uploaded": 1625638667950,
             "installType": "npm"
         },
         "mblode.arvis-trello": {
             "description": "Trello for arvis",
             "creator": "mblode",
-            "webAddress": "https://github.com/jopemachine/arvis-trello#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-trello#readme",
             "uploaded": 1625641390392,
             "installType": "npm"
         },
         "Jeppe Staerk.arvis-show-network-info": {
             "description": "See network info and local devices",
             "creator": "Jeppe Staerk",
-            "webAddress": "https://github.com/jopemachine/arvis-show-network-info#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-show-network-info#readme",
             "uploaded": 1625660997919,
             "installType": "npm"
         },
         "Jeppe Staerk.arvis-currency-conversion": {
             "description": "Foreign exchange rates and currency conversion",
             "creator": "Jeppe Staerk",
-            "webAddress": "https://github.com/jopemachine/arvis-currency-conversion#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-currency-conversion#readme",
             "uploaded": 1625662218215,
             "installType": "npm"
         },
         "nswbmw.arvis-httpstatuses": {
             "description": "arvis workflow for [httpstatuses.com](https://httpstatuses.com)",
             "creator": "nswbmw",
-            "webAddress": "https://github.com/jopemachine/arvis-httpstatuses",
+            "webAddress": "https://github.com/arvis-workflows/arvis-httpstatuses",
             "uploaded": 1625663956516,
             "installType": "npm"
         },
         "importre.arvis-figlet": {
             "description": "arvis workflow to asciify plain text using figlet.js",
             "creator": "importre",
-            "webAddress": "https://github.com/jopemachine/arvis-figlet",
+            "webAddress": "https://github.com/arvis-workflows/arvis-figlet",
             "uploaded": 1625745582090,
             "installType": "npm"
         }
