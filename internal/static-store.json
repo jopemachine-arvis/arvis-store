@@ -330,6 +330,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-figlet",
             "uploaded": 1625745582090,
             "installType": "npm"
+        },
+        "Yago.arvis-svg-optimizer": {
+            "description": "Optimize copied SVG markup",
+            "creator": "Yago",
+            "webAddress": "https://github.com/arvis-workflows/arvis-svg-optimizer",
+            "uploaded": 1625964352964,
+            "installType": "npm"
         }
     },
     "plugins": {
