@@ -19,6 +19,6 @@ Description: ${chalk.cyan(extension.description ? extension.description : '(No d
 `);
   }).join('\n');
 
-  spinner.succeed('Search done.');
+  spinner.succeed('Search done.').start();
   console.log('\n' + result);
 };

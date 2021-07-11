@@ -25,7 +25,7 @@ export const publishHandler = async (flags: any) => {
 
   const extensionFilePath = await findUp(['arvis-workflow.json', 'arvis-plugin.json'], { type: 'file', allowSymlinks: false });
   if (!extensionFilePath) {
-    spinner.fail('It seems current directory is not arvis extension directory.');
+    spinner.fail('It seems current directory is not arvis extension directory.').start();
     process.exit(1);
   }
 
@@ -39,12 +39,12 @@ export const publishHandler = async (flags: any) => {
   if (!installType) installType = inferInstallType(pkgExist);
 
   if (!pkgExist && installType === 'npm') {
-    spinner.fail('npm flags on, but package.json not found!');
+    spinner.fail('npm flags on, but package.json not found!').start();
     process.exit(1);
   }
 
   if (pkgExist && (pkg.name !== extensionInfo.name)) {
-    spinner.fail('Make sure the package name is the same as the extension name.');
+    spinner.fail('Make sure the package name is the same as the extension name.').start();
     process.exit(1);
   }
 
@@ -58,7 +58,7 @@ export const publishHandler = async (flags: any) => {
   const { creator, name, description, platform, webAddress, defaultIcon, version } = extensionInfo;
 
   if (pkgExist && (pkg.version !== extensionInfo.version)) {
-    spinner.fail('Make sure the package version is the same as the extension version.');
+    spinner.fail('Make sure the package version is the same as the extension version.').start();
     process.exit(1);
   }
 
@@ -70,13 +70,13 @@ export const publishHandler = async (flags: any) => {
   if (installType === 'local') {
     const installerFilePath = findUp.sync(`${bundleId}.arvis${type}`, { type: 'file', allowSymlinks: false });
     if (!installerFilePath) {
-      spinner.fail(`local flags on, but '${bundleId}.arvis${type}' file not found!`);
+      spinner.fail(`local flags on, but '${bundleId}.arvis${type}' file not found!`).start();
       process.exit(1);
     }
     localInstallFile = await fse.readFile(installerFilePath);
   }
 
-  spinner.start(chalk.whiteBright(`Creating a PR to add '${bundleId}' to arvis-store..`));
+  spinner.start(chalk.whiteBright(`Creating a PR to add '${bundleId}' to arvis-store..`)).start();
 
   try {
     await publish({
@@ -93,10 +93,10 @@ export const publishHandler = async (flags: any) => {
       webAddress,
     });
   } catch (err) {
-    spinner.fail('Works failed.');
+    spinner.fail('Works failed.').start();
     console.error(chalk.red(err));
     return;
   }
 
-  spinner.succeed('🎉 Works done!');
+  spinner.succeed('🎉 Works done!').start();
 };

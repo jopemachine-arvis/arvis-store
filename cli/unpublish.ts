@@ -20,5 +20,5 @@ export const unpublishHandler = async (creator: string, name: string) => {
     process.exit(1);
   }
 
-  spinner.succeed('Works done.');
+  spinner.succeed('Works done.').start();
 };

@@ -8,6 +8,7 @@ import _ from 'lodash';
 import alphaSort from 'alpha-sort';
 import fse from 'fs-extra';
 import shortHash from 'shorthash2';
+import open from 'open';
 
 const markdownTable = require('markdown-table');
 let { Octokit } = require('@octokit/core');
@@ -135,7 +136,7 @@ export const publish = async ({
   const head = shortHash(`${creator}@${name}@${new Date().getTime()}`);
 
   // Create a PR adding new extension
-  octokit.createPullRequest({
+  const prResp = await octokit.createPullRequest({
     title,
     head,
     body,
@@ -160,4 +161,6 @@ export const publish = async ({
       },
     ],
   });
+
+  open(`https://github.com/jopemachine/arvis-store/pull/${prResp.data.number}`, { wait: false });
 };
