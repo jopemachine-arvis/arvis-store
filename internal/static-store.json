@@ -337,6 +337,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-svg-optimizer",
             "uploaded": 1625964352964,
             "installType": "npm"
+        },
+        "importre.arvis-gitignore": {
+            "description": "Search .gitignore files",
+            "creator": "importre",
+            "webAddress": "https://github.com/arvis-workflows/arvis-gitignore",
+            "uploaded": 1625985246070,
+            "installType": "npm"
         }
     },
     "plugins": {
