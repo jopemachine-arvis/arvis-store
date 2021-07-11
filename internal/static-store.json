@@ -344,6 +344,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-gitignore",
             "uploaded": 1625985246070,
             "installType": "npm"
+        },
+        "mariusrumpf.arvis-generate-uuid": {
+            "description": "arvis Workflow - Generate UUIDs in v1 and v4",
+            "creator": "mariusrumpf",
+            "webAddress": "https://github.com/arvis-workflows/arvis-generate-uuid",
+            "uploaded": 1625988043361,
+            "installType": "npm"
         }
     },
     "plugins": {
