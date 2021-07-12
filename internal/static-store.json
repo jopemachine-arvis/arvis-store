@@ -129,6 +129,9 @@
             "installType": "npm"
         },
         "jopemachine.arvis-evernote-workflow": {
+            "platform": [
+                "darwin"
+            ],
             "description": "Arvis evernote workflow",
             "creator": "jopemachine",
             "webAddress": "https://github.com/arvis-workflows/arvis-evernote-workflow#readme",
