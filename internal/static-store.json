@@ -361,6 +361,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-naver-dictionary-with-anki",
             "uploaded": 1626063790278,
             "installType": "local"
+        },
+        "Sam Verschueren.arvis-ionic": {
+            "description": "Search through the Ionic documentation",
+            "creator": "Sam Verschueren",
+            "webAddress": "https://github.com/arvis-workflows/arvis-ionic",
+            "uploaded": 1626064835495,
+            "installType": "npm"
         }
     },
     "plugins": {
