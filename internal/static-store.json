@@ -382,6 +382,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-notion-search",
             "uploaded": 1626069547407,
             "installType": "npm"
+        },
+        "vivaxy.arvis-open-in-vscode": {
+            "description": "Arvis workflow to open in VSCode",
+            "creator": "vivaxy",
+            "webAddress": "https://github.com/arvis-workflows/arvis-open-in-vscode",
+            "uploaded": 1626082021298,
+            "installType": "npm"
         }
     },
     "plugins": {
