@@ -1,6 +1,7 @@
 import * as api from './arvisStoreApi';
 import * as constant from './constant';
-import { publish } from './publish';
+import { createPublishRequest } from './publish';
+import { createUnpublishRequest } from './unpublish';
 import { downloadExtension } from './download';
 import {
   searchExtension,
@@ -13,8 +14,9 @@ import {
 export {
   api,
   constant,
+  createPublishRequest,
+  createUnpublishRequest,
   downloadExtension,
-  publish,
   searchExtension,
   searchMostTotalDownload,
   searchMostWeeklyDownload,

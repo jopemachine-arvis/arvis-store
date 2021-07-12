@@ -6,7 +6,6 @@ import {
 } from './arvisStoreApi';
 import _ from 'lodash';
 import alphaSort from 'alpha-sort';
-import open from 'open';
 
 const markdownTable = require('markdown-table');
 let { Octokit } = require('@octokit/core');
@@ -30,7 +29,7 @@ const transform = (extension: any) => {
   ];
 };
 
-export const unpublish = async ({
+export const createUnpublishRequest = async ({
   apiKey,
   creator,
   name,
@@ -102,7 +101,7 @@ export const unpublish = async ({
     `## Delete extension\n\n* Type: '${type}'\n* Creator: '${creator}'\n* Name: '${name}'\n* Reason: `;
 
   // Create a PR adding new extension
-  const prResp = await octokit.createPullRequest({
+  return await octokit.createPullRequest({
     title,
     head,
     body,
@@ -121,6 +120,4 @@ export const unpublish = async ({
       },
     ],
   });
-
-  open(`https://github.com/jopemachine/arvis-store/pull/${prResp.data.number}`, { wait: false });
 };

@@ -3,8 +3,9 @@ import findUp from 'find-up';
 import ora from 'ora';
 import path from 'path';
 import fse from 'fs-extra';
+import open from 'open';
 import { validate } from 'arvis-extension-validator';
-import { publish } from '../lib';
+import { createPublishRequest } from '../lib';
 import { getGithubApiKey } from '../lib/conf';
 
 const resolveInstallType = (flags: any) => {
@@ -79,7 +80,7 @@ export const publishHandler = async (flags: any) => {
   spinner.start(chalk.whiteBright(`Creating a PR to add '${bundleId}' to arvis-store..`)).start();
 
   try {
-    await publish({
+    const prResp = await createPublishRequest({
       apiKey: getGithubApiKey(),
       creator,
       description,
@@ -92,11 +93,13 @@ export const publishHandler = async (flags: any) => {
       type,
       webAddress,
     });
+
+    spinner.succeed('🎉 Works done!').start();
+    open(`https://github.com/jopemachine/arvis-store/pull/${prResp.data.number}`, { wait: false });
+
   } catch (err) {
     spinner.fail('Works failed.').start();
     console.error(chalk.red(err));
     return;
   }
-
-  spinner.succeed('🎉 Works done!').start();
 };

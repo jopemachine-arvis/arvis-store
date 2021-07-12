@@ -23,7 +23,7 @@ Usage
         $ arvis-store download plugin [some_extension_bundleId]
 
     To unpublish extension from store, run
-        $ arvis-store [creator_name] [extension_name]
+        $ arvis-store unpublish [creator_name] [extension_name]
 
 See README.md for more details.
 `);
