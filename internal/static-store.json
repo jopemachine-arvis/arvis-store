@@ -134,7 +134,7 @@
             ],
             "description": "Arvis evernote workflow",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-evernote-workflow#readme",
+            "webAddress": "https://github.com/arvis-workflows/arvis-evernote-workflow#readme",
             "uploaded": 1625320635746,
             "installType": "npm"
         },
