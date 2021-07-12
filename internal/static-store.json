@@ -389,6 +389,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-open-in-vscode",
             "uploaded": 1626082021298,
             "installType": "npm"
+        },
+        "Alexandr Melihovv.arvis-irregular-verbs": {
+            "description": "Show forms of English irregular verbs",
+            "creator": "Alexandr Melihovv",
+            "webAddress": "https://github.com/arvis-workflows/arvis-irregular-workflow",
+            "uploaded": 1626097882509,
+            "installType": "npm"
         }
     },
     "plugins": {
