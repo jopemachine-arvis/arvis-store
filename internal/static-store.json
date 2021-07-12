@@ -354,6 +354,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-generate-uuid",
             "uploaded": 1625988043361,
             "installType": "npm"
+        },
+        "WiseSquid.arvis-naver-dictionary-with-anki": {
+            "description": "WiseSquid",
+            "creator": "WiseSquid",
+            "webAddress": "https://github.com/arvis-workflows/arvis-naver-dictionary-with-anki",
+            "uploaded": 1626063790278,
+            "installType": "local"
         }
     },
     "plugins": {
