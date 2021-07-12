@@ -375,6 +375,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-ipaddress#readme",
             "uploaded": 1626065835101,
             "installType": "npm"
+        },
+        "Otis Chou.arvis-notion-search": {
+            "description": "Quick search for Notion",
+            "creator": "Otis Chou",
+            "webAddress": "https://github.com/arvis-workflows/arvis-notion-search",
+            "uploaded": 1626069547407,
+            "installType": "npm"
         }
     },
     "plugins": {
