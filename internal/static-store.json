@@ -426,6 +426,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-calculator-plugin#readme",
             "uploaded": 1626144811603,
             "installType": "npm"
+        },
+        "jopemachine.arvis-simple-websearch-plugin": {
+            "description": "Search web in Arvis easily",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-simple-websearch-plugin",
+            "uploaded": 1626155366597,
+            "installType": "npm"
         }
     }
 }
