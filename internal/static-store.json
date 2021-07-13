@@ -403,6 +403,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-superscriptify",
             "uploaded": 1626156819178,
             "installType": "npm"
+        },
+        "Prashant Palikhe.arvis-bundlephobia": {
+            "description": "Arvis workflow to find a JavaScript bundle size",
+            "creator": "Prashant Palikhe",
+            "webAddress": "https://github.com/arvis-workflows/arvis-bundlephobia",
+            "uploaded": 1626157913707,
+            "installType": "npm"
         }
     },
     "plugins": {
