@@ -396,6 +396,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-irregular-workflow",
             "uploaded": 1626097882509,
             "installType": "npm"
+        },
+        "Henry Desroches.arvis-superscriptify": {
+            "description": "Converts text to superscript",
+            "creator": "Henry Desroches",
+            "webAddress": "https://github.com/arvis-workflows/arvis-superscriptify",
+            "uploaded": 1626156819178,
+            "installType": "npm"
         }
     },
     "plugins": {
