@@ -410,6 +410,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-bundlephobia",
             "uploaded": 1626157913707,
             "installType": "npm"
+        },
+        "Varun Vachhar.arvis-react-doc": {
+            "description": "Search for React & React Native API references",
+            "creator": "Varun Vachhar",
+            "webAddress": "http://varun.ca",
+            "uploaded": 1626159767647,
+            "installType": "npm"
         }
     },
     "plugins": {
