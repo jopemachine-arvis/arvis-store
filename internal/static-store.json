@@ -454,6 +454,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-simple-websearch-plugin",
             "uploaded": 1626155366597,
             "installType": "npm"
+        },
+        "jopemachine.arvis-convert-unit-plugin": {
+            "description": "Convert units by Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-convert-unit-plugin",
+            "uploaded": 1626250760528,
+            "installType": "npm"
         }
     }
 }
