@@ -14,6 +14,7 @@ Note: Below table entries are sorted in extension name alphabetically.
 | :-------------------------------------------------------------------------------------------- | :---------- | :-------------------------------------------------- | :-: | :-: | :---: |
 | [arvis-app-launcher-plugin](https://github.com/jopemachine/arvis-app-launcher-plugin)         | jopemachine | App launcher plugin for Arvis                       |  O  |  O  |   O   |
 | [arvis-calculator-plugin](https://github.com/jopemachine/arvis-calculator-plugin#readme)      | jopemachine | Calculator plugin for Arvis                         |  O  |  O  |   O   |
+| [arvis-chrome-bookmark-plugin](https://github.com/jopemachine/arvis-chrome-bookmark-plugin)   | jopemachine | Search Google Chrome Bookmark in Arvis              |  O  |  O  |   O   |
 | [arvis-convert-unit-plugin](https://github.com/jopemachine/arvis-convert-unit-plugin)         | jopemachine | Convert units by Arvis                              |  O  |  O  |   O   |
 | [arvis-filesearch-plugin](https://github.com/jopemachine/arvis-filesearch-plugin)             | jopemachine | File search plugin for Arvis                        |  O  |  O  |   O   |
 | [arvis-freedict-plugin](https://github.com/jopemachine/arvis-freedict-plugin)                 | jopemachine | Dictionary plugin for Arvis using dictionaryapi.dev |  O  |  O  |   O   |
