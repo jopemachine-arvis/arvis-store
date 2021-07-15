@@ -17,7 +17,7 @@ export const unpublishHandler = async (creator: string, name: string) => {
       apiKey: getGithubApiKey(),
     });
 
-    spinner.succeed('Works done.').start();
+    spinner.succeed('Works done.').stop();
     open(`https://github.com/jopemachine/arvis-store/pull/${prResp.data.number}`, { wait: false });
 
   } catch (err) {

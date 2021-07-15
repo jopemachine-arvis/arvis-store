@@ -94,13 +94,11 @@ export const publishHandler = async (flags: any) => {
       webAddress,
     });
 
-    spinner.clear().stop();
-    console.log(chalk.white('🎉 Works done!'));
-
+    spinner.succeed('🎉 Works done!').stop();
     open(`https://github.com/jopemachine/arvis-store/pull/${prResp.data.number}`, { wait: false });
 
   } catch (err) {
-    spinner.fail('Works failed.').start();
+    spinner.fail('Works failed.').stop();
     console.error(chalk.red(err));
     return;
   }
