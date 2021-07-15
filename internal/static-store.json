@@ -445,6 +445,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-vimawesome",
             "uploaded": 1626340688179,
             "installType": "npm"
+        },
+        "Duoc Nguyen.arvis-cool-words": {
+            "description": "Find cool words",
+            "creator": "Duoc Nguyen",
+            "webAddress": "https://github.com/arvis-workflows/arvis-cool-words",
+            "uploaded": 1626343351634,
+            "installType": "npm"
         }
     },
     "plugins": {
