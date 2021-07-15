@@ -417,6 +417,13 @@
             "webAddress": "http://varun.ca",
             "uploaded": 1626159767647,
             "installType": "npm"
+        },
+        "ryou.arvis-html-entity": {
+            "description": "Decode and Encode HTML entity",
+            "creator": "ryou",
+            "webAddress": "https://sd-milieu.net/",
+            "uploaded": 1626339334325,
+            "installType": "npm"
         }
     },
     "plugins": {
