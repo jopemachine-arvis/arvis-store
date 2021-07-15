@@ -424,6 +424,13 @@
             "webAddress": "https://sd-milieu.net/",
             "uploaded": 1626339334325,
             "installType": "npm"
+        },
+        "Sasikanth Dronavalli.arvis-meteor-packages": {
+            "description": "Search Meteor JS Packages",
+            "creator": "Sasikanth Dronavalli",
+            "webAddress": "https://github.com/arvis-workflows/arvis-meteor-packages",
+            "uploaded": 1626339504359,
+            "installType": "npm"
         }
     },
     "plugins": {
