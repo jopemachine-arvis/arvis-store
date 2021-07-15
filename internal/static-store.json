@@ -431,6 +431,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-meteor-packages",
             "uploaded": 1626339504359,
             "installType": "npm"
+        },
+        "Conan Lau.arvis-diskusage": {
+            "description": "Show disk usage in Arvis",
+            "creator": "Conan Lau",
+            "webAddress": "https://github.com/lcc19941214/arvis-diskusage",
+            "uploaded": 1626340085174,
+            "installType": "npm"
         }
     },
     "plugins": {
