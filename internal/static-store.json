@@ -452,6 +452,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-cool-words",
             "uploaded": 1626343351634,
             "installType": "npm"
+        },
+        "jopemachine.arvis-nintendo-switch-price-compare": {
+            "description": "Compare Nintendo Switch game prices by country through https://eshop-prices.com/",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/arvis-workflows/arvis-nintendo-switch-price-compare",
+            "uploaded": 1626357814104,
+            "installType": "npm"
         }
     },
     "plugins": {
