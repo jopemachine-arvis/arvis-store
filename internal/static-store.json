@@ -438,6 +438,13 @@
             "webAddress": "https://github.com/lcc19941214/arvis-diskusage",
             "uploaded": 1626340085174,
             "installType": "npm"
+        },
+        "Patrick Kahl.arvis-vimawesome": {
+            "description": "Search vim plugins from vimawesome",
+            "creator": "Patrick Kahl",
+            "webAddress": "https://github.com/arvis-workflows/arvis-vimawesome",
+            "uploaded": 1626340688179,
+            "installType": "npm"
         }
     },
     "plugins": {
