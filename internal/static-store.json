@@ -487,6 +487,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-git-commit-emoji",
             "uploaded": 1626445019484,
             "installType": "npm"
+        },
+        "Jon Rohan.arvis-figma-shortcuts": {
+            "description": "arvis workflow to quick link figma projects and files",
+            "creator": "Jon Rohan",
+            "webAddress": "https://github.com/arvis-workflows/arvis-figma-shortcuts",
+            "uploaded": 1626447503857,
+            "installType": "npm"
         }
     },
     "plugins": {
