@@ -501,6 +501,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-abbreviation-workflow#readme",
             "uploaded": 1626448026764,
             "installType": "npm"
+        },
+        "patrickkahl.arvis-bitly": {
+            "description": "Shorten URL with bit.ly",
+            "creator": "patrickkahl",
+            "webAddress": "https://github.com/arvis-workflows/arvis-bitly",
+            "uploaded": 1626448832236,
+            "installType": "npm"
         }
     },
     "plugins": {
