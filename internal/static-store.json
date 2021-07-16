@@ -480,6 +480,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-minecraft-recipe",
             "uploaded": 1626444055643,
             "installType": "npm"
+        },
+        "liuxinran1008.arvis-git-commit-emoji": {
+            "description": "arvis workflow to sort applicable emoji for git commit message quickly.",
+            "creator": "liuxinran1008",
+            "webAddress": "https://github.com/arvis-workflows/arvis-git-commit-emoji",
+            "uploaded": 1626445019484,
+            "installType": "npm"
         }
     },
     "plugins": {
