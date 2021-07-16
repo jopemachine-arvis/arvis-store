@@ -494,6 +494,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-figma-shortcuts",
             "uploaded": 1626447503857,
             "installType": "npm"
+        },
+        "MinionsDave.arvis-abbreviation-workflow": {
+            "description": "Arvis workflow to query word abbreviation from abbreviations.com",
+            "creator": "MinionsDave",
+            "webAddress": "https://github.com/arvis-workflows/arvis-abbreviation-workflow#readme",
+            "uploaded": 1626448026764,
+            "installType": "npm"
         }
     },
     "plugins": {
