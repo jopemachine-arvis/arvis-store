@@ -466,6 +466,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-inko-workflow",
             "uploaded": 1626443130475,
             "installType": "npm"
+        },
+        "progfay.arvis-emojisyo-workflow": {
+            "description": "📕 Dictionary of emoji",
+            "creator": "progfay",
+            "webAddress": "https://github.com/arvis-workflows/arvis-emojisyo-workflow",
+            "uploaded": 1626443587883,
+            "installType": "npm"
         }
     },
     "plugins": {
