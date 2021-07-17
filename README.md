@@ -1,8 +1,8 @@
 # arvis-store
 
 [![CodeFactor](https://www.codefactor.io/repository/github/jopemachine/arvis-store/badge)](https://www.codefactor.io/repository/github/jopemachine/arvis-store)
-[![Known Vulnerabilities](https://snyk.io/test/github/jopemachine/arvis-store/badge.svg)]()
-![CI](https://github.com/jopemachine/arvis-store/actions/workflows/test.yml/badge.svg)
+[![Known Vulnerabilities](https://snyk.io/test/github/jopemachine/arvis-store/badge.svg)](https://www.codefactor.io/repository/github/jopemachine/arvis-store)
+[![CI](https://github.com/jopemachine/arvis-store/actions/workflows/test.yml/badge.svg)](https://github.com/jopemachine/arvis-store/actions)
 [![NPM version](https://badge.fury.io/js/arvis-store.svg)](http://badge.fury.io/js/arvis-store)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
@@ -20,7 +20,7 @@ Publish and Retrieve Arvis extension info
 
 ### view
 
-To view some extension info, run below command.
+To view some extension info on cli, run below command.
 
 ```
 $ arvis-store view [some_extension_name]
@@ -28,8 +28,11 @@ $ arvis-store view [some_extension_name]
 
 ### set github token
 
-To publish arvis extension to store, need to set github api key first.
-Run below command to set github api key.
+To publish arvis extension to store, need to set **github api token** first.
+
+Gey your github access token in [here](https://github.com/settings/tokens) and,
+
+Run below command to set your github api token.
 
 ```
 $ arvis-store set-gh-api-key [github_api_key]
@@ -37,14 +40,19 @@ $ arvis-store set-gh-api-key [github_api_key]
 
 ### publish
 
-To publish current extension directory to npm and arvis-store, run below command.
+To publish current extension directory to arvis-store, run below command.
+
 If the extension in uploaded on npm, run
 
 ```
 $ arvis-store publish --npm
 ```
 
-Otherwise, run
+Otherwise, run below command.
+
+Below command upload an `arvisworkflow` file or an `arvisplugin` file to the arvis-store github repository.
+
+Users can download the file from the store and use it.
 
 ```
 $ arvis-store publish --local
@@ -52,11 +60,11 @@ $ arvis-store publish --local
 
 ### download
 
-To download local extension file, (bundleId is 'creator.name')
+To download local extension file,
 
 ```
-$ arvis-store download workflow [some_extension_bundleId]
-$ arvis-store download plugin [some_extension_bundleId]
+$ arvis-store download workflow [creator_name] [extension_name]
+$ arvis-store download plugin [creator_name] [extension_name]
 ```
 
 ### unpublish
