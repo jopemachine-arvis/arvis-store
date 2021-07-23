@@ -18,4 +18,5 @@ Note: Below table entries are sorted in extension name alphabetically.
 | [arvis-convert-unit-plugin](https://github.com/jopemachine/arvis-convert-unit-plugin)         | jopemachine | Convert units by Arvis                              |  O  |  O  |   O   |
 | [arvis-filesearch-plugin](https://github.com/jopemachine/arvis-filesearch-plugin)             | jopemachine | File search plugin for Arvis                        |  O  |  O  |   O   |
 | [arvis-freedict-plugin](https://github.com/jopemachine/arvis-freedict-plugin)                 | jopemachine | Dictionary plugin for Arvis using dictionaryapi.dev |  O  |  O  |   O   |
+| [arvis-naver-search-plugin](https://github.com/jopemachine/arvis-naver-search-plugin)         | jopemachine | Naver search plugin for Arvis                       |  O  |  O  |   O   |
 | [arvis-simple-websearch-plugin](https://github.com/jopemachine/arvis-simple-websearch-plugin) | jopemachine | Search web in Arvis easily                          |  O  |  O  |   O   |

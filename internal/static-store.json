@@ -566,6 +566,13 @@
             "webAddress": "https://github.com/jopemachine/arvis-chrome-bookmark-plugin",
             "uploaded": 1626299042208,
             "installType": "npm"
+        },
+        "jopemachine.arvis-naver-search-plugin": {
+            "description": "Naver search plugin for Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/jopemachine/arvis-naver-search-plugin",
+            "uploaded": 1627019225325,
+            "installType": "npm"
         }
     }
 }
