@@ -528,28 +528,28 @@
         "jopemachine.arvis-freedict-plugin": {
             "description": "Dictionary plugin for Arvis using dictionaryapi.dev",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-freedict-plugin",
+            "webAddress": "https://github.com/arvis-plugins/arvis-freedict-plugin",
             "uploaded": 1625238042179,
             "installType": "npm"
         },
         "jopemachine.arvis-app-launcher-plugin": {
             "description": "App launcher plugin for Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-app-launcher-plugin",
+            "webAddress": "https://github.com/arvis-plugins/arvis-app-launcher-plugin",
             "uploaded": 1625238763313,
             "installType": "npm"
         },
         "jopemachine.arvis-filesearch-plugin": {
             "description": "File search plugin for Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-filesearch-plugin",
+            "webAddress": "https://github.com/arvis-plugins/arvis-filesearch-plugin",
             "uploaded": 1625239087532,
             "installType": "npm"
         },
         "jopemachine.arvis-calculator-plugin": {
             "description": "Calculator plugin for Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-calculator-plugin#readme",
+            "webAddress": "https://github.com/arvis-plugins/arvis-calculator-plugin#readme",
             "uploaded": 1626144811603,
             "installType": "npm"
         },
@@ -563,21 +563,21 @@
         "jopemachine.arvis-convert-unit-plugin": {
             "description": "Convert units by Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-convert-unit-plugin",
+            "webAddress": "https://github.com/arvis-plugins/arvis-convert-unit-plugin",
             "uploaded": 1626250760528,
             "installType": "npm"
         },
         "jopemachine.arvis-chrome-bookmark-plugin": {
             "description": "Search Google Chrome Bookmark in Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-chrome-bookmark-plugin",
+            "webAddress": "https://github.com/arvis-plugins/arvis-chrome-bookmark-plugin",
             "uploaded": 1626299042208,
             "installType": "npm"
         },
         "jopemachine.arvis-naver-search-plugin": {
             "description": "Naver search plugin for Arvis",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-naver-search-plugin",
+            "webAddress": "https://github.com/arvis-plugins/arvis-naver-search-plugin",
             "uploaded": 1627019225325,
             "installType": "npm"
         }
