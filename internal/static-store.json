@@ -556,7 +556,7 @@
         "jopemachine.arvis-simple-websearch-plugin": {
             "description": "Search web in Arvis easily",
             "creator": "jopemachine",
-            "webAddress": "https://github.com/jopemachine/arvis-simple-websearch-plugin",
+            "webAddress": "https://github.com/arvis-plugins/arvis-simple-websearch-plugin",
             "uploaded": 1626155366597,
             "installType": "npm"
         },

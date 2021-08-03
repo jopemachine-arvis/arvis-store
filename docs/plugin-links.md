@@ -12,11 +12,11 @@ Note: Below table entries are sorted in extension name alphabetically.
 
 | Name                                                                                          | Creator     | Description                                         | Win | Mac | Linux |
 | :-------------------------------------------------------------------------------------------- | :---------- | :-------------------------------------------------- | :-: | :-: | :---: |
-| [arvis-app-launcher-plugin](https://github.com/jopemachine/arvis-app-launcher-plugin)         | jopemachine | App launcher plugin for Arvis                       |  O  |  O  |   O   |
-| [arvis-calculator-plugin](https://github.com/jopemachine/arvis-calculator-plugin#readme)      | jopemachine | Calculator plugin for Arvis                         |  O  |  O  |   O   |
-| [arvis-chrome-bookmark-plugin](https://github.com/jopemachine/arvis-chrome-bookmark-plugin)   | jopemachine | Search Google Chrome Bookmark in Arvis              |  O  |  O  |   O   |
-| [arvis-convert-unit-plugin](https://github.com/jopemachine/arvis-convert-unit-plugin)         | jopemachine | Convert units by Arvis                              |  O  |  O  |   O   |
-| [arvis-filesearch-plugin](https://github.com/jopemachine/arvis-filesearch-plugin)             | jopemachine | File search plugin for Arvis                        |  O  |  O  |   O   |
-| [arvis-freedict-plugin](https://github.com/jopemachine/arvis-freedict-plugin)                 | jopemachine | Dictionary plugin for Arvis using dictionaryapi.dev |  O  |  O  |   O   |
-| [arvis-naver-search-plugin](https://github.com/jopemachine/arvis-naver-search-plugin)         | jopemachine | Naver search plugin for Arvis                       |  O  |  O  |   O   |
-| [arvis-simple-websearch-plugin](https://github.com/jopemachine/arvis-simple-websearch-plugin) | jopemachine | Search web in Arvis easily                          |  O  |  O  |   O   |
+| [arvis-app-launcher-plugin](https://github.com/arvis-plugins/arvis-app-launcher-plugin)         | jopemachine | App launcher plugin for Arvis                       |  O  |  O  |   O   |
+| [arvis-calculator-plugin](https://github.com/arvis-plugins/arvis-calculator-plugin#readme)      | jopemachine | Calculator plugin for Arvis                         |  O  |  O  |   O   |
+| [arvis-chrome-bookmark-plugin](https://github.com/arvis-plugins/arvis-chrome-bookmark-plugin)   | jopemachine | Search Google Chrome Bookmark in Arvis              |  O  |  O  |   O   |
+| [arvis-convert-unit-plugin](https://github.com/arvis-plugins/arvis-convert-unit-plugin)         | jopemachine | Convert units by Arvis                              |  O  |  O  |   O   |
+| [arvis-filesearch-plugin](https://github.com/arvis-plugins/arvis-filesearch-plugin)             | jopemachine | File search plugin for Arvis                        |  O  |  O  |   O   |
+| [arvis-freedict-plugin](https://github.com/arvis-plugins/arvis-freedict-plugin)                 | jopemachine | Dictionary plugin for Arvis using dictionaryapi.dev |  O  |  O  |   O   |
+| [arvis-naver-search-plugin](https://github.com/arvis-plugins/arvis-naver-search-plugin)         | jopemachine | Naver search plugin for Arvis                       |  O  |  O  |   O   |
+| [arvis-simple-websearch-plugin](https://github.com/arvis-plugins/arvis-simple-websearch-plugin) | jopemachine | Search web in Arvis easily                          |  O  |  O  |   O   |
