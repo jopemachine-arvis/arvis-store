@@ -10,8 +10,8 @@ You can find `arvis-plugin` here.
 
 Note: Below table entries are sorted in extension name alphabetically.
 
-| Name                                                                                          | Creator     | Description                                         | Win | Mac | Linux |
-| :-------------------------------------------------------------------------------------------- | :---------- | :-------------------------------------------------- | :-: | :-: | :---: |
+| Name                                                                                            | Creator     | Description                                         | Win | Mac | Linux |
+| :---------------------------------------------------------------------------------------------- | :---------- | :-------------------------------------------------- | :-: | :-: | :---: |
 | [arvis-app-launcher-plugin](https://github.com/arvis-plugins/arvis-app-launcher-plugin)         | jopemachine | App launcher plugin for Arvis                       |  O  |  O  |   O   |
 | [arvis-calculator-plugin](https://github.com/arvis-plugins/arvis-calculator-plugin#readme)      | jopemachine | Calculator plugin for Arvis                         |  O  |  O  |   O   |
 | [arvis-chrome-bookmark-plugin](https://github.com/arvis-plugins/arvis-chrome-bookmark-plugin)   | jopemachine | Search Google Chrome Bookmark in Arvis              |  O  |  O  |   O   |
@@ -20,3 +20,4 @@ Note: Below table entries are sorted in extension name alphabetically.
 | [arvis-freedict-plugin](https://github.com/arvis-plugins/arvis-freedict-plugin)                 | jopemachine | Dictionary plugin for Arvis using dictionaryapi.dev |  O  |  O  |   O   |
 | [arvis-naver-search-plugin](https://github.com/arvis-plugins/arvis-naver-search-plugin)         | jopemachine | Naver search plugin for Arvis                       |  O  |  O  |   O   |
 | [arvis-simple-websearch-plugin](https://github.com/arvis-plugins/arvis-simple-websearch-plugin) | jopemachine | Search web in Arvis easily                          |  O  |  O  |   O   |
+| [arvis-terminal-plugin](https://github.com/arvis-plugins/arvis-terminal-plugin)                 | jopemachine | Terminal plugin for Arvis                           |  X  |  O  |   O   |

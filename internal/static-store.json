@@ -580,6 +580,17 @@
             "webAddress": "https://github.com/arvis-plugins/arvis-naver-search-plugin",
             "uploaded": 1627019225325,
             "installType": "npm"
+        },
+        "jopemachine.arvis-terminal-plugin": {
+            "platform": [
+                "darwin",
+                "linux"
+            ],
+            "description": "Terminal plugin for Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/arvis-plugins/arvis-terminal-plugin",
+            "uploaded": 1628157311774,
+            "installType": "npm"
         }
     }
 }
