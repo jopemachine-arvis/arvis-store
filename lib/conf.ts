@@ -12,11 +12,11 @@ const config = new Conf({
   configName: 'arvis-store',
 });
 
-export const setGithubApiKey = (apiKey: string) => {
+export const setGithubApiKey = (apiKey: string): void => {
   config.set('GH_API_KEY', apiKey);
 };
 
-export const getGithubApiKey = () => {
+export const getGithubApiKey = (): string => {
   if (!config.has('GH_API_KEY')) {
     throw new Error('GH_API_KEY key is not set. Please set github api key first');
   }
