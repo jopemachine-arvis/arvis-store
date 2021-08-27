@@ -21,7 +21,7 @@ export const unpublishHandler = async (creator: string, name: string) => {
     open(`https://github.com/jopemachine/arvis-store/pull/${prResp.data.number}`, { wait: false });
 
   } catch (err) {
-    spinner.fail(err);
+    spinner.fail(err as string);
     process.exit(1);
   }
 };
