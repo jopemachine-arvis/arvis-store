@@ -591,6 +591,17 @@
             "webAddress": "https://github.com/arvis-plugins/arvis-terminal-plugin",
             "uploaded": 1628157311774,
             "installType": "npm"
+        },
+        "jopemachine.arvis-open-setting-plugin": {
+            "platform": [
+                "win32",
+                "darwin"
+            ],
+            "description": "Open setting by Arvis",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/arvis-plugins/arvis-open-setting-plugin",
+            "uploaded": 1630088017280,
+            "installType": "npm"
         }
     }
 }
