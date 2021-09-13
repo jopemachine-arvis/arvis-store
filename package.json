@@ -60,7 +60,7 @@
     "octokit-commit-multiple-files": "^3.2.1",
     "octokit-plugin-create-pull-request": "^3.9.3",
     "open": "^8.2.1",
-    "ora": "^5.4.1",
+    "ora": "^6.0.0",
     "parse-json": "^5.2.0",
     "shorthash2": "^1.0.3"
   },
