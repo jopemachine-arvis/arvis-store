@@ -7,6 +7,7 @@ import open from 'open';
 import { validate } from 'arvis-extension-validator';
 import { createPublishRequest } from '../lib';
 import { getGithubApiKey } from '../lib/conf';
+import { readJson5 } from '../lib/readJson5';
 
 const resolveInstallType = (flags: any) => {
   if (flags.npm) return 'npm';
@@ -33,8 +34,8 @@ export const publishHandler = async (flags: any) => {
   const extensionDir = path.dirname(extensionFilePath);
   const pkgPath = path.resolve(extensionDir, 'package.json');
   const pkgExist = await fse.pathExists(pkgPath);
-  const pkg = pkgExist ? await fse.readJSON(pkgPath) : undefined;
-  const extensionInfo = await fse.readJSON(extensionFilePath);
+  const pkg = pkgExist ? await readJson5(pkgPath) as any : undefined;
+  const extensionInfo = await readJson5(extensionFilePath) as any;
 
   let installType = resolveInstallType(flags);
   if (!installType) installType = inferInstallType(pkgExist);
