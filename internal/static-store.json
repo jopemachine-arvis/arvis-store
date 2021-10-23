@@ -522,6 +522,13 @@
             "webAddress": "https://github.com/arvis-workflows/arvis-github-emoji",
             "uploaded": 1627196846290,
             "installType": "npm"
+        },
+        "jopemachine.arvis-awesome-stars": {
+            "description": "Search someone's starred repository through 'awesome-stars'",
+            "creator": "jopemachine",
+            "webAddress": "https://github.com/arvis-workflows/arvis-awesome-stars",
+            "uploaded": 1634965246651,
+            "installType": "npm"
         }
     },
     "plugins": {
