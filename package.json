@@ -1,6 +1,6 @@
 {
   "name": "arvis-store",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Publish and Retrieve Arvis extension info",
   "main": "dist/lib/index.js",
   "bin": {
@@ -21,12 +21,11 @@
     "arvis-extension"
   ],
   "repository": {
-    "url": "https://github.com/jopemachine/arvis-store"
+    "url": "https://github.com/jopemachine-arvis/arvis-store"
   },
   "author": {
     "name": "jopemachine",
-    "email": "jopemachine@gmail.com",
-    "url": "https://jopemachine.github.io/arvis.com/"
+    "email": "jopemachine@gmail.com"
   },
   "license": "MIT",
   "devDependencies": {

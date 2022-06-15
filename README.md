@@ -1,12 +1,12 @@
 # arvis-store
 
-[![CodeFactor](https://www.codefactor.io/repository/github/jopemachine/arvis-store/badge)](https://www.codefactor.io/repository/github/jopemachine/arvis-store)
-[![Known Vulnerabilities](https://snyk.io/test/github/jopemachine/arvis-store/badge.svg)](https://www.codefactor.io/repository/github/jopemachine/arvis-store)
-[![CI](https://github.com/jopemachine/arvis-store/actions/workflows/test.yml/badge.svg)](https://github.com/jopemachine/arvis-store/actions)
+[![CodeFactor](https://www.codefactor.io/repository/github/jopemachine-arvis/arvis-store/badge)](https://www.codefactor.io/repository/github/jopemachine-arvis/arvis-store)
+[![Known Vulnerabilities](https://snyk.io/test/github/jopemachine-arvis/arvis-store/badge.svg)](https://www.codefactor.io/repository/github/jopemachine-arvis/arvis-store)
+[![CI](https://github.com/jopemachine-arvis/arvis-store/actions/workflows/test.yml/badge.svg)](https://github.com/jopemachine-arvis/arvis-store/actions)
 [![NPM version](https://badge.fury.io/js/arvis-store.svg)](http://badge.fury.io/js/arvis-store)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-[![GitHub issues](https://img.shields.io/github/issues/jopemachine/arvis-store.svg)](https://GitHub.com/jopemachine/arvis-store/issues/)
+[![GitHub issues](https://img.shields.io/github/issues/jopemachine-arvis/arvis-store.svg)](https://GitHub.com/jopemachine-arvis/arvis-store/issues/)
 
 Publish and Retrieve Arvis extension info
 

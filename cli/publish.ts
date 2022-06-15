@@ -96,7 +96,7 @@ export const publishHandler = async (flags: any) => {
     });
 
     spinner.succeed('🎉 Works done!').stop();
-    open(`https://github.com/jopemachine/arvis-store/pull/${prResp.data.number}`, { wait: false });
+    open(`https://github.com/jopemachine-arvis/arvis-store/pull/${prResp.data.number}`, { wait: false });
 
   } catch (err) {
     spinner.fail('Works failed.').stop();
